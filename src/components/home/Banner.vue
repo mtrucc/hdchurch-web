@@ -8,19 +8,20 @@
     >
       <v-row
         class="fill-height pa-3"
-        align="center"
+        align="end"
+        justify="end"
       >
         <v-col
           cols="12"
           md="7"
           offset-md="5"
         >
-          <h1 class="display-3 font-weight-light">
-            The Art Of Travel
-          </h1>
+          <h2 class="display-3 font-weight-light">
+            北京市基督教海淀堂
+          </h2>
 
           <div class="subheading text-uppercase pl-2 mb-4">
-            Finding Beauty, One flight at a time
+            Beijing Haidian Christian Church
           </div>
 
           <v-btn
