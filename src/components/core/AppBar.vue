@@ -1,10 +1,9 @@
 <template>
   <v-app-bar
     app
-    color="#6A76AB"
+    color="rgba(203, 170, 92, 1)"
     dark
     shrink-on-scroll
-    prominent
     :src="require('@/assets/hdimage/bgimg.jpg')"
     fade-img-on-scroll
   >
@@ -16,7 +15,6 @@
     </template>
 
     <v-app-bar-nav-icon
-      class="hidden-md-and-up"
       @click="toggleDrawer"
     />
 
@@ -38,9 +36,9 @@
 
     <template v-slot:extension>
       <v-tabs align-with-title>
-        <v-tab>Tab 1</v-tab>
-        <v-tab>Tab 2</v-tab>
-        <v-tab>Tab 3</v-tab>
+        <v-tab>首页</v-tab>
+        <v-tab>主日证道</v-tab>
+        <v-tab>每日聆听</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
