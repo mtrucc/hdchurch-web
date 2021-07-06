@@ -1,7 +1,8 @@
 <template>
-  <v-app>
+  <v-app id="inspire">
     <core-app-bar />
 
+    <!-- 左侧收缩的菜单 -->
     <core-drawer />
 
     <core-view />
