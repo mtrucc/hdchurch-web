@@ -13,8 +13,9 @@
       >
         <v-col
           cols="12"
-          md="7"
-          offset-md="5"
+          md="8"
+          offset-md="4"
+          class="background-blue d-flex flex-column align-lg-end align-md-end"
         >
           <h2 class="display-3 font-weight-light">
             北京市基督教海淀堂
@@ -28,7 +29,7 @@
             color="primary"
             depressed
           >
-            Subscribe
+            了解更多
           </v-btn>
         </v-col>
       </v-row>
@@ -41,3 +42,9 @@
     name: 'HomeBanner',
   }
 </script>
+
+<style>
+.background-blue {
+  background: rgb(33 150 243 / 50%);
+}
+</style>

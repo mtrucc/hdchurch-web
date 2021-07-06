@@ -5,15 +5,19 @@
         <slot />
       </v-col>
 
-      <feed-card
+
+      <SundaySermon :size="2"/>
+      <DailyListening :size="2"/>
+
+      <!-- <feed-card
         v-for="(article, i) in paginatedArticles"
         :key="article.title"
         :size="layout[i]"
         :value="article"
-      />
+      /> -->
     </v-row>
 
-    <v-row align="center">
+    <!-- <v-row align="center">
       <v-col cols="3">
         <base-btn
           v-if="page !== 1"
@@ -47,7 +51,7 @@
           <v-icon>mdi-chevron-right</v-icon>
         </base-btn>
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 
@@ -61,7 +65,9 @@
     name: 'Feed',
 
     components: {
-      FeedCard: () => import('@/components/FeedCard'),
+      // FeedCard: () => import('@/components/FeedCard'),
+      SundaySermon: () => import('@/components/SundaySermon'),
+      DailyListening: () => import('@/components/DailyListening'),
     },
 
     data: () => ({
