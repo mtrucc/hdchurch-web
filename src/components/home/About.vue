@@ -1,21 +1,15 @@
 <template>
-  <v-container
-    id="about"
-    tag="section"
-  >
-    <base-subheading>About Us</base-subheading>
+  <v-container id="about" tag="section">
+    <base-subheading>关于海淀堂</base-subheading>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut tortor tellus. Donec maximus curs us pulvinar.
-      Proin vehicula eros mauris, sit amet rutrum libero vestibulum ac. Morbi ullamcorper eu lacus vulputate consect.
-      Etur vivamus sagittis accumsan quam eu malesuada. Proin et ante vel libero ultrices cursus. Donec felis leo, cu
-      rsus eget hendrerit at, congue nec enim.
+      海淀新堂位于被誉为中国硅谷的北京海淀高新区中关村西区，是该区著名的科技、文化、商业三大广场重要组成部分。新堂总占地3900平方米，建筑面积约4000平方米，西临北京著称名的海淀图书城，北对北京大学、清华大学。
     </p>
   </v-container>
 </template>
 
 <script>
-  export default {
-    name: 'HomeAbout',
-  }
+export default {
+  name: "HomeAbout",
+};
 </script>

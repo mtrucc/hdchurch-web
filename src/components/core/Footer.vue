@@ -7,7 +7,8 @@
     <v-container class="mx-auto">
       <v-row>
         <v-col cols="9">
-          <base-btn
+          <p>©2018北京市基督教会海淀堂 | 京ICP备05053093号 | 京公网安备11010802010153号</p>
+          <!-- <base-btn
             v-for="(item, i) in items"
             :key="i"
             :href="item.href"
@@ -17,7 +18,7 @@
             target="_blank"
           >
             <v-icon v-text="item.icon" />
-          </base-btn>
+          </base-btn> -->
         </v-col>
 
         <v-spacer />
