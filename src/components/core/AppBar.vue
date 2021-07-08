@@ -1,7 +1,7 @@
 <template>
   <v-app-bar
     app
-    color="rgba(203, 170, 92, 1)"
+    color="#cbaa5c"
     dark
     shrink-on-scroll
     :src="require('@/assets/hdimage/bgimg.jpg')"
@@ -14,9 +14,7 @@
       ></v-img>
     </template>
 
-    <v-app-bar-nav-icon
-      @click="toggleDrawer"
-    />
+    <v-app-bar-nav-icon @click="toggleDrawer" />
 
     <v-app-bar-title>北京市基督教海淀堂</v-app-bar-title>
 
@@ -35,38 +33,41 @@
     </v-btn> -->
 
     <template v-slot:extension>
-      <v-tabs align-with-title>
-        <v-tab>首页</v-tab>
-        <v-tab>主日证道</v-tab>
-        <v-tab>每日聆听</v-tab>
+      <v-tabs align-with-title v-model="tab">
+        <v-tab to='/'>首页</v-tab>
+        <v-tab to='/sermon'>主日证道</v-tab>
+        <v-tab to='/sermon'>每日聆听</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
 </template>
 
 <script>
-  // Utilities
-  import {
-    mapGetters,
-    mapMutations,
-  } from 'vuex'
+// Utilities
+import { mapGetters, mapMutations } from "vuex";
 
-  export default {
-    name: 'CoreAppBar',
+export default {
+  name: "CoreAppBar",
 
-    computed: {
-      ...mapGetters(['links']),
+  computed: {
+    ...mapGetters(["links"]),
+  },
+
+  methods: {
+    ...mapMutations(["toggleDrawer"]),
+    onClick(e, item) {
+      e.stopPropagation();
+
+      if (item.to || !item.href) return;
+
+      this.$vuetify.goTo(item.href.endsWith("!") ? 0 : item.href);
     },
+  },
 
-    methods: {
-      ...mapMutations(['toggleDrawer']),
-      onClick (e, item) {
-        e.stopPropagation()
-
-        if (item.to || !item.href) return
-
-        this.$vuetify.goTo(item.href.endsWith('!') ? 0 : item.href)
-      },
-    },
-  }
+  data() {
+    return {
+      tab: null,
+    };
+  },
+};
 </script>

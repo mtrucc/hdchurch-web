@@ -1,21 +1,72 @@
 <template>
-  <v-col cols="12" :md="size === 2 ? 6 : size === 3 ? 4 : undefined">
-    <!-- 每日聆听 -->
-    <base-card :height="350" color="grey lighten-1" dark href="#!">
-      <v-img
-        :src="require(`@/assets/20190121_ListenToBible-1.jpeg`)"
-        height="100%"
-        gradient="rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)"
-      >
-        <v-row class="fill-height ma-0 justify-center align-center text-center">
-          <v-col cols="12">
-            <h3 class="text-h3 mb-2">每日聆听</h3>
-            <h4 class="title mb-2">每日金句 | 每日灵粮 | 灵修分享</h4>
-            <v-btn color="primary" depressed> 了解更多 </v-btn>
-          </v-col>
-        </v-row>
-      </v-img>
-    </base-card>
+  <v-col cols="12" :md="6" class="d-flex overflow-hidden" width="100%" >
+    <v-card class="mx-auto d-flex flex-column" width="100%">
+      <v-card-title class="primary white--text">
+        <span class="text-h6">报告事项</span>
+        <v-spacer></v-spacer>
+        <v-btn
+          outlined
+          :color="'white'"
+          dark
+          depressed
+          @click="interval == null ? start() : stop()"
+        >
+          查看历史事项
+        </v-btn>
+      </v-card-title>
+      <v-card-text class="py-0 overflow-auto">
+        <v-timeline dense>
+          <v-timeline-item small>
+            <v-row class="pt-1">
+              <v-col>
+                <v-card class="pa-3">
+                  <strong>2021年07月08日</strong>
+                  <v-card-text class="pa-0 pt-2">
+                    通知：本堂原定于每周三晚19:30-20:30的线上祷告会因故取消！请弟兄姊妹们互相转告。
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+          <v-timeline-item small>
+            <v-row class="pt-1">
+              <v-col>
+                <v-card class="pa-3">
+                  <strong>2021年07月08日</strong>
+                  <v-card-text class="pa-0 pt-2">
+                    通知：本堂原定于每周三晚19:30-20:30的线上祷告会因故取消！请弟兄姊妹们互相转告。
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+          <v-timeline-item small>
+            <v-row class="pt-1">
+              <v-col>
+                <v-card class="pa-3">
+                  <strong>2021年07月08日</strong>
+                  <v-card-text class="pa-0 pt-2">
+                    通知：本堂原定于每周三晚19:30-20:30的线上祷告会因故取消！请弟兄姊妹们互相转告。
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+          <v-timeline-item small>
+            <v-row class="pt-1">
+              <v-col>
+                <v-card class="pa-3">
+                  <strong>2021年07月08日</strong>
+                  <v-card-text class="pa-0 pt-2">
+                    通知：本堂原定于每周三晚19:30-20:30的线上祷告会因故取消！请弟兄姊妹们互相转告。
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+        </v-timeline>
+      </v-card-text>
+    </v-card>
   </v-col>
 </template>
 
