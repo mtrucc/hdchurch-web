@@ -1,28 +1,26 @@
 <template>
-  <v-app id="inspire">
-    <core-app-bar />
-
-    <!-- 左侧收缩的菜单 -->
-    <core-drawer />
-
-    <core-view />
-
-    <core-footer />
-
-    <!-- <core-cta /> -->
-  </v-app>
+  <a-config-provider :locale="locale">
+    <router-view />
+    <global-setting />
+  </a-config-provider>
 </template>
 
-<script>
-  export default {
-    name: 'App',
+<script lang="ts" setup>
+  import { computed } from 'vue';
+  import enUS from '@arco-design/web-vue/es/locale/lang/en-us';
+  import zhCN from '@arco-design/web-vue/es/locale/lang/zh-cn';
+  import GlobalSetting from '@/components/global-setting/index.vue';
+  import useLocale from '@/hooks/locale';
 
-    components: {
-      // CoreCta: () => import('@/components/core/Cta'),
-      CoreDrawer: () => import('@/components/core/Drawer'),
-      CoreFooter: () => import('@/components/core/Footer'),
-      CoreAppBar: () => import('@/components/core/AppBar'),
-      CoreView: () => import('@/components/core/View'),
-    },
-  }
+  const { currentLocale } = useLocale();
+  const locale = computed(() => {
+    switch (currentLocale.value) {
+      case 'zh-CN':
+        return zhCN;
+      case 'en-US':
+        return enUS;
+      default:
+        return enUS;
+    }
+  });
 </script>
