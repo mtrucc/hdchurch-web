@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Breadcrumb :items="['menu.exception', 'menu.exception.403']" />
+    <Breadcrumb :items="['MarkDown', '编辑']" />
     <div class="content">
       <div id="vditor" />
     </div>
@@ -17,6 +17,7 @@
   onMounted(() => {
     vditor.value = new Vditor('vditor', {
       height: '100%',
+      width: '100%',
       mode: 'wysiwyg',
       after: () => {
         // vditor.value is a instance of Vditor now and thus can be safely used here
@@ -68,20 +69,25 @@
 
 <style scoped lang="less">
   .container {
-    padding: 0 20px 20px 20px;
-    // height: calc(100% - 40px);
-    overflow: auto;
-    height: 100%;
+    padding: 0 20px 0px 20px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     :deep(.content) {
-      position: relative;
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      // position: relative;
       // display: flex;
       // flex-direction: column;
       // align-items: center;
       // justify-content: center;
-      height: 100%;
+      // height: 100%;
       // text-align: center;
       background-color: var(--color-bg-1);
-      border-radius: 4px;
+      border-radius: 8px;
+      border: 1px solid #e8e8e8;
     }
   }
 </style>
