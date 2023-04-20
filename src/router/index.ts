@@ -23,6 +23,14 @@ const router = createRouter({
         requiresAuth: false,
       },
     },
+    {
+      path: '/markdown',
+      name: 'markdown',
+      component: () => import('@/views/markdown/view/index.vue'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
     ...appRoutes,
     REDIRECT_MAIN,
     NOT_FOUND_ROUTE,
