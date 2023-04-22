@@ -2,8 +2,8 @@ import { DEFAULT_LAYOUT } from '../base';
 import { AppRouteRecordRaw } from '../types';
 
 const MARKDOWN: AppRouteRecordRaw = {
-  path: '/markdown',
-  name: 'markdown',
+  path: '/markdownTest',
+  name: 'markdownTest',
   component: DEFAULT_LAYOUT,
   meta: {
     locale: 'MarkDown',

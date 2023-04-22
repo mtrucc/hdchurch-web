@@ -1,14 +1,17 @@
 <template>
   <div class="container">
-    <div v-html="markdownHtml"></div>
+    <!-- eslint-disable vue/no-v-html -->
+    <div ref="markdown" class="vditor-reset"></div>
   </div>
 </template>
 
 <script lang="ts" setup>
   import { ref, onMounted } from 'vue';
-  import MarkdownIt from 'markdown-it';
+  // @ts-ignore
+  import VditorPreview from 'vditor/dist/method.min';
+  import 'vditor/dist/index.css';
 
-  // const markdown = ref<HTMLElement | null>(null);
+  const markdown = ref<HTMLElement | null>(null);
   const markdownHtml = ref<string>('');
 
   const mdData = `##### 本堂将于2023年1月1日起，恢复线下礼拜，即刻开放预约通道，欢迎弟兄姊妹<font color='red'>实名制预约</font>。
@@ -46,15 +49,21 @@
 ![](http://1304370199.vod2.myqcloud.com/e8895a7fvodbj1304370199/d747d583243791580965269864/MFJhoDoqAtQA.png)`;
 
   onMounted(() => {
-    const md = new MarkdownIt();
-    const markdownData = md.render(mdData);
+    console.log('这不科学啊');
+    const dom: any = markdown.value;
+    console.log(dom);
+    VditorPreview.preview(dom, mdData, {
+      cdn: '/vditor',
+    });
+    // const md = new MarkdownIt();
+    // const markdownData = md.render(mdData);
     // eslint-disable-next-line no-console
-    console.log(markdownData);
+    // console.log(markdownData);
     // @ts-ignore
     // console.log(markdown.value);
     // @ts-ignore
     // markdown?.value?.innerHTML = 'markdownData';
-    markdownHtml.value = markdownData;
+    // markdownHtml.value = markdownData;
   });
 </script>
 
