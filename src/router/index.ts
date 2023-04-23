@@ -24,7 +24,7 @@ const router = createRouter({
       },
     },
     {
-      path: '/markdown',
+      path: '/:markdown/markdown',
       name: 'markdown',
       component: () => import('@/views/markdown/view/index.vue'),
       meta: {

@@ -2,6 +2,16 @@
   <div class="container">
     <!-- eslint-disable vue/no-v-html -->
     <div ref="markdown" class="vditor-reset"></div>
+
+    <video
+      id="player-container-id"
+      width="414"
+      height="270"
+      preload="auto"
+      playsinline
+      webkit-playsinline
+    >
+    </video>
   </div>
 </template>
 
@@ -10,6 +20,9 @@
   // @ts-ignore
   import VditorPreview from 'vditor/dist/method.min';
   import 'vditor/dist/index.css';
+  // @ts-ignore
+  import TCPlayer from 'tcplayer.js';
+  import 'tcplayer.js/dist/tcplayer.min.css';
 
   const markdown = ref<HTMLElement | null>(null);
   const markdownHtml = ref<string>('');
@@ -49,6 +62,11 @@
 ![](http://1304370199.vod2.myqcloud.com/e8895a7fvodbj1304370199/d747d583243791580965269864/MFJhoDoqAtQA.png)`;
 
   onMounted(() => {
+    const url =
+      'http://1304370199.vod2.myqcloud.com/bf05aca7vodcq1304370199/d2be5b6c243791581442112917/K2awiD5FLC4A.mp4';
+    const player = TCPlayer('player-container-id', {}); // player-container-id 为播放器容器 ID，必须与 html 中一致
+    player.src(url); // url 播放地址
+
     console.log('这不科学啊');
     const dom: any = markdown.value;
     console.log(dom);

@@ -43,6 +43,7 @@
     "pinia": "^2.0.23",
     "query-string": "^8.0.3",
     "sortablejs": "^1.15.0",
+    "tcplayer.js": "^4.8.0",
     "vditor": "^3.9.2",
     "vue": "^3.2.40",
     "vue-echarts": "^6.2.3",
