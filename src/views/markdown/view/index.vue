@@ -1,9 +1,10 @@
 <template>
   <div class="container">
+    内容区域
     <!-- eslint-disable vue/no-v-html -->
-    <div ref="markdown" class="vditor-reset"></div>
+    <!-- <div ref="markdown" class="vditor-reset"></div> -->
 
-    <video
+    <!-- <video
       id="player-container-id"
       width="414"
       height="270"
@@ -11,7 +12,7 @@
       playsinline
       webkit-playsinline
     >
-    </video>
+    </video> -->
   </div>
 </template>
 
@@ -62,17 +63,17 @@
 ![](http://1304370199.vod2.myqcloud.com/e8895a7fvodbj1304370199/d747d583243791580965269864/MFJhoDoqAtQA.png)`;
 
   onMounted(() => {
-    const url =
-      'http://1304370199.vod2.myqcloud.com/bf05aca7vodcq1304370199/d2be5b6c243791581442112917/K2awiD5FLC4A.mp4';
-    const player = TCPlayer('player-container-id', {}); // player-container-id 为播放器容器 ID，必须与 html 中一致
-    player.src(url); // url 播放地址
+    // const url =
+    //   'http://1304370199.vod2.myqcloud.com/bf05aca7vodcq1304370199/d2be5b6c243791581442112917/K2awiD5FLC4A.mp4';
+    // const player = TCPlayer('player-container-id', {}); // player-container-id 为播放器容器 ID，必须与 html 中一致
+    // player.src(url); // url 播放地址
 
-    console.log('这不科学啊');
-    const dom: any = markdown.value;
-    console.log(dom);
-    VditorPreview.preview(dom, mdData, {
-      cdn: '/vditor',
-    });
+    // console.log('这不科学啊');
+    // const dom: any = markdown.value;
+    // console.log(dom);
+    // VditorPreview.preview(dom, mdData, {
+    //   cdn: '/vditor',
+    // });
     // const md = new MarkdownIt();
     // const markdownData = md.render(mdData);
     // eslint-disable-next-line no-console
@@ -94,5 +95,6 @@
 <style scoped lang="less">
   .container {
     padding: 20px;
+    height: 1000px;
   }
 </style>

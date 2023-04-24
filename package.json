@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.44.7",
+    "@arco-themes/vue-testmt": "^0.0.3",
     "@vueuse/core": "^9.3.0",
     "axios": "^0.24.0",
     "dayjs": "^1.11.5",
