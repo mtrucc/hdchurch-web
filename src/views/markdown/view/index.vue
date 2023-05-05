@@ -32,6 +32,10 @@
       webkit-playsinline
     >
     </video>
+    
+    <div class="amap">
+      <Mapview></Mapview>
+    </div>
   </div>
 </template>
 
@@ -58,6 +62,8 @@
 
   // highlightjs
   import hljs from 'highlight.js';
+
+  import Mapview from '@/components/amap/MapContainer.vue';
 
   VMdPreview.use(githubTheme, {
     Hljs: hljs,
@@ -140,5 +146,8 @@
   .container {
     padding: 20px;
     // height: 1000px;
+  }
+  .amap {
+    height: 500px;
   }
 </style>

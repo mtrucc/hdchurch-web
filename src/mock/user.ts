@@ -10,7 +10,7 @@ import { isLogin } from '@/utils/auth';
 setupMock({
   setup() {
     // Mock.XHR.prototype.withCredentials = true;
-
+    Mock.mock('/https://webapi.amap.com/.*/, "xhr"');
     // 用户信息
     Mock.mock(new RegExp('/api/user/info'), () => {
       if (isLogin()) {

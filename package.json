@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "@arco-design/web-vue": "^2.44.7",
     "@arco-themes/vue-testmt": "^0.0.3",
     "@bytemd/plugin-gfm": "latest",
