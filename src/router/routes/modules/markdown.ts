@@ -19,7 +19,7 @@ const MARKDOWN: AppRouteRecordRaw = {
       meta: {
         locale: '编辑',
         requiresAuth: true,
-        roles: ['admin'],
+        roles: ['*'],
       },
     },
     {

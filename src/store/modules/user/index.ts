@@ -56,16 +56,29 @@ const useUserStore = defineStore('user', {
     // Get user's information
     async info() {
       const res = await getUserInfo();
+      console.log('info', res);
 
-      this.setInfo(res.data);
+      const { roles } = res.data;
+
+      const role = roles[0];
+
+      const formatData = {
+        name: res.data.name,
+        role,
+      };
+
+      this.setInfo(formatData);
     },
 
     // Login
     async login(loginForm: LoginData) {
       try {
         const res = await userLogin(loginForm);
+        // eslint-disable-next-line no-console
+        console.log('res', res);
         setToken(res.data.token);
       } catch (err) {
+        console.log('err', err);
         clearToken();
         throw err;
       }
