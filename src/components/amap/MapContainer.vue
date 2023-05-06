@@ -9,6 +9,7 @@
   const map = shallowRef(null);
   const initMap = () => {
     // 6438d7bc3edcd16624c56d2da6cc73bc
+    // @ts-ignore
     // eslint-disable-next-line no-underscore-dangle
     window._AMapSecurityConfig = {
       securityJsCode: '6438d7bc3edcd16624c56d2da6cc73bc',

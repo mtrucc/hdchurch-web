@@ -28,6 +28,10 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
   ],
+  globals: {
+    AMap: true,
+    _AMapSecurityConfig: true
+  },
   settings: {
     'import/resolver': {
       typescript: {
