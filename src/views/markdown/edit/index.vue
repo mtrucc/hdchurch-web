@@ -2,13 +2,20 @@
   <div class="container">
     <Breadcrumb :items="['MarkDown', '编辑']" />
     <div class="content">
-      <v-md-editor v-model="markdownHtml" height="100%"></v-md-editor>
+      <v-md-editor
+        v-model="markdownHtml"
+        height="100%"
+        :disabled-menus="[]"
+        @upload-image="handleUploadImage"
+      ></v-md-editor>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
   import { ref, onMounted } from 'vue';
+
+  import { uploadFile } from '@/api/file';
 
   // @ts-ignore
   import VMdEditor from '@kangc/v-md-editor/lib/codemirror-editor';
@@ -85,6 +92,27 @@
   const markdownHtml = ref<string>(mdData);
 
   onMounted(() => {});
+
+  function handleUploadImage(event: any, insertImage: any, files: any) {
+    console.log(event, insertImage, files);
+    // 拿到 files 之后上传到文件服务器，然后向编辑框中插入对应的内容
+    if (files && files[0]) {
+      const formData = new FormData();
+
+      formData.append('file', files[0]);
+
+      uploadFile(formData).then((res: any) => {
+        if (res.code === 200) {
+          insertImage({
+            url: `/api/file/download?path=${res.data.path}`,
+            desc: res.data.originalname,
+            // width: 'auto',
+            // height: 'auto',
+          });
+        }
+      });
+    }
+  }
 </script>
 
 <script lang="ts">
