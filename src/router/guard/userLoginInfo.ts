@@ -32,7 +32,7 @@ export default function setupUserLoginInfoGuard(router: Router) {
         next();
         return;
       }
-      if (to.name === 'markdownView') {
+      if (to.name === 'home') {
         next();
         return;
       }

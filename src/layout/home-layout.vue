@@ -69,6 +69,6 @@
 <style scoped lang="less">
   .content {
     background-color: var(--color-fill-2);
-    padding: 56px 0 0 0;
+    padding: 70px 0 0 0;
   }
 </style>
