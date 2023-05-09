@@ -99,6 +99,7 @@
       width: 100%;
       max-width: 1152px;
       margin: 0 auto;
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       height: 100%;
@@ -115,7 +116,7 @@
       height: 100%;
       display: flex;
       align-items: center;
-      margin: 0 20px;
+      margin: 0 0 0 20px;
     }
 
     &-logo {

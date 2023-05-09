@@ -45,13 +45,11 @@
           offset: new AMap.Pixel(0, -30),
         });
         function markerClick(e: any) {
-          console.log(e);
           infoWindow.setContent(e.target.content);
           infoWindow.open(map.value, e.target.getPosition());
         }
         // eslint-disable-next-line no-restricted-syntax
         for (const item of positionArr) {
-          console.log(item);
           const marker = new AMap.Marker({
             position: [item[0], item[1]],
           });

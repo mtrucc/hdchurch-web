@@ -2,6 +2,7 @@
   <div class="content">
     <NavBar />
     <PageLayout />
+    <Footer />
   </div>
 </template>
 
@@ -11,7 +12,7 @@
   import { useAppStore, useUserStore } from '@/store';
   import NavBar from '@/components/navbar/navbar.vue';
   import Menu from '@/components/menu/index.vue';
-  import Footer from '@/components/footer/index.vue';
+  import Footer from '@/components/footer/footer.vue';
   import TabBar from '@/components/tab-bar/index.vue';
   import usePermission from '@/hooks/permission';
   import useResponsive from '@/hooks/responsive';
@@ -68,7 +69,7 @@
 
 <style scoped lang="less">
   .content {
-    background-color: var(--color-fill-2);
+    // background-color: var(--color-fill-2);
     padding: 70px 0 0 0;
   }
 </style>

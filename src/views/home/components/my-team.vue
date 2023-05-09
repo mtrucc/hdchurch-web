@@ -1,28 +1,18 @@
 <template>
-  <a-card class="general-card" :title="$t('userInfo.tab.title.team')">
-    <a-list :bordered="false">
+  <a-card class="general-card" title="快速导航" :body-style="{ padding: '0' }">
+    <a-list :bordered="false" size="small">
       <a-list-item
         v-for="team in teamList"
         :key="team.id"
         action-layout="horizontal"
       >
-        <a-skeleton v-if="loading" :loading="loading" :animation="true">
-          <a-row :gutter="6">
-            <a-col :span="6">
-              <a-skeleton-shape shape="circle" />
-            </a-col>
-            <a-col :span="16">
-              <a-skeleton-line :widths="['100%', '40%']" :rows="2" />
-            </a-col>
-          </a-row>
-        </a-skeleton>
-        <a-list-item-meta v-else :title="team.name">
+        <a-list-item-meta :title="team.name">
           <template #avatar>
             <a-avatar>
               <img :src="team.avatar" />
             </a-avatar>
           </template>
-          <template #description> 共{{ team.peopleNumber }}人 </template>
+          <template #description> {{ team.description }} </template>
         </a-list-item-meta>
       </a-list-item>
     </a-list>
@@ -30,24 +20,46 @@
 </template>
 
 <script lang="ts" setup>
-  import { queryMyTeamList, MyTeamRecord } from '@/api/user-center';
-  import useRequest from '@/hooks/request';
-
-  const defaultValue: MyTeamRecord[] = new Array(4).fill({});
-  const { loading, response: teamList } = useRequest<MyTeamRecord[]>(
-    queryMyTeamList,
-    defaultValue
-  );
+  const teamList = [
+    {
+      avatar:
+        '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp',
+      id: 1,
+      name: '主日证道',
+      description: 'Sunday Sermon',
+    },
+    {
+      avatar:
+        '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp',
+      id: 2,
+      name: '主日献诗',
+      description: 'Choral Worship',
+    },
+    {
+      avatar:
+        '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp',
+      id: 3,
+      name: '海淀聚会点',
+      description: 'Branch of HDChurch',
+    },
+    {
+      avatar:
+        '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp',
+      id: 4,
+      name: '联系我们',
+      description: 'Contact Us',
+    }
+  ];
 </script>
 
 <style scoped lang="less">
   .general-card {
-    height: 356px;
+    height: 310px;
     .arco-list-item {
-      height: 72px;
-      padding-left: 0;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--color-neutral-3);
+      // height: 72px;
+      // padding-left: 0;
+      // padding-bottom: 12px;
+      // border-bottom: 1px solid var(--color-neutral-3);
       &:last-child {
         border-bottom: none;
       }
@@ -56,4 +68,5 @@
       }
     }
   }
+  
 </style>
