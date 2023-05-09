@@ -1,9 +1,5 @@
 <template>
-  <a-card
-    class="general-card"
-    title="报告事项"
-    :body-style="{ padding: '0', height: '100%', overflow: 'auto' }"
-  >
+  <a-card class="general-card" title="主日预告" :body-style="{ padding: '0' }">
     <v-md-preview :text="mdData"></v-md-preview>
   </a-card>
 </template>
@@ -27,7 +23,7 @@
 
   const mdData = ref(``);
 
-  fetch('baogao.md')
+  fetch('yugao2.md')
     .then((res) => res.text())
     .then((data) => {
       mdData.value = data;
@@ -41,9 +37,9 @@
       // padding-left: 0;
       // padding-bottom: 12px;
       // border-bottom: 1px solid var(--color-neutral-3);
-      &:last-child {
-        border-bottom: none;
-      }
+      // &:last-child {
+      //   border-bottom: none;
+      // }
       .arco-list-item-meta {
         padding: 0;
       }

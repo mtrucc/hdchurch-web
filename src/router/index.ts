@@ -28,6 +28,16 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/2',
+          name: 'home2',
+          component: () => import('@/views/home/index2.vue'),
+          meta: {
+            locale: '首页2',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
       ],
     },
     {
