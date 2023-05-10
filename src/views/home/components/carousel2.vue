@@ -11,15 +11,9 @@
     show-arrow="hover"
   >
     <a-carousel-item v-for="image in images" :key="image">
-      <div class="carousel"></div>
-      <img
-        :src="image"
-        :style="{
-          // 'width': '100%',
-          'height': '100%',
-          'object-fit': 'fill',
-        }"
-      />
+      <div class="carousel">
+        <img class="img" :src="image" />
+      </div>
     </a-carousel-item>
   </a-carousel>
 </template>
@@ -56,5 +50,12 @@
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 </style>
