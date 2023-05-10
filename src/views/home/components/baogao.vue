@@ -2,7 +2,12 @@
   <a-card
     class="general-card"
     title="报告事项"
-    :body-style="{ padding: '0', height: '100%', overflow: 'auto' }"
+    :body-style="{
+      'padding': '0',
+      'height': '100%',
+      'overflow': 'auto',
+      'max-height': '500px',
+    }"
   >
     <v-md-preview :text="mdData"></v-md-preview>
   </a-card>
@@ -36,13 +41,16 @@
 
 <style scoped lang="less">
   .general-card {
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color-fill-1);
     .arco-list-item {
       // height: 72px;
       // padding-left: 0;
       // padding-bottom: 12px;
       // border-bottom: 1px solid var(--color-neutral-3);
       &:last-child {
-        border-bottom: none;
+        // border-bottom: none;
       }
       .arco-list-item-meta {
         padding: 0;

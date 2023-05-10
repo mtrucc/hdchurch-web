@@ -6,7 +6,9 @@
           <Mapview></Mapview>
         </a-grid-item>
         <a-grid-item :span="{ xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 8 }">
-          公众号
+          <div class="joinLark">
+            <img :src="QrImg" alt="" class="larkimg" />
+          </div>
         </a-grid-item>
         <a-grid-item :span="{ xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 8 }">
           网上直播
@@ -23,14 +25,17 @@
 
 <script lang="ts" setup>
   import Mapview from '@/components/amap/MapContainer.vue';
+  import QrImg from '@/assets/images/MFJhoDoqAtQA.png'
 </script>
 
 <style lang="less" scoped>
   .footer {
     display: flex;
     // height: 300px;
-    // color: var(--color-text-2);
-    background-color: var(--color-fill-2);
+    color: var(--color-text-2);
+    background-color: var(--color-fill-1);
+    // box-shadow: inset 0 106px 36px -116px rgba(0, 0, 0, 0.14);
+    // background-color: #ffffff;
   }
   .footerneirong {
     width: 100%;
@@ -46,5 +51,9 @@
   .bottom {
     display: flex;
     justify-content: center;
+  }
+
+  .larkimg {
+    width: 120px;
   }
 </style>

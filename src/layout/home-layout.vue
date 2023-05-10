@@ -69,7 +69,8 @@
 
 <style scoped lang="less">
   .content {
-    // background-color: var(--color-fill-2);
+    // background-color: var(--color-fill-1);
     padding: 70px 0 0 0;
+    // background-image: url('@/assets/images/hdback.jpg');
   }
 </style>

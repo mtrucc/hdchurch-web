@@ -39,6 +39,9 @@
 
 <style scoped lang="less">
   .general-card {
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color-fill-1);
     .arco-list-item {
       // height: 72px;
       // padding-left: 0;

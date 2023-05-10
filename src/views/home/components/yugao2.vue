@@ -1,5 +1,9 @@
 <template>
-  <a-card class="general-card" title="主日预告" :body-style="{ padding: '0' }">
+  <a-card
+    class="general-card"
+    title="主日预告"
+    :body-style="{ 'padding': '0', 'overflow': 'auto', 'max-height': '500px' }"
+  >
     <v-md-preview :text="mdData"></v-md-preview>
   </a-card>
 </template>
@@ -32,6 +36,9 @@
 
 <style scoped lang="less">
   .general-card {
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color-fill-1);
     .arco-list-item {
       // height: 72px;
       // padding-left: 0;
