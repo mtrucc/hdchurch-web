@@ -40,6 +40,10 @@ export default function setupUserLoginInfoGuard(router: Router) {
         next();
         return;
       }
+      if (to.name === 'home3') {
+        next();
+        return;
+      }
       next({
         name: 'login',
         query: {

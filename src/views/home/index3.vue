@@ -1,32 +1,7 @@
 <template>
   <div class="container">
     <div class="content">
-      <a-grid :cols="24" :col-gap="16" :row-gap="16">
-        <a-grid-item :span="{ xs: 24, sm: 24, md: 24, lg: 8, xl: 8, xxl: 8 }">
-          <MyTeam />
-        </a-grid-item>
-        <a-grid-item
-          :span="{ xs: 24, sm: 24, md: 24, lg: 16, xl: 16, xxl: 16 }"
-        >
-          <Carousel />
-        </a-grid-item>
-      </a-grid>
-    </div>
-    <a-divider />
-    <div class="markdown">
-      <a-grid :cols="24" :col-gap="16" :row-gap="16">
-        <a-grid-item :span="{ xs: 24, sm: 24, md: 24, lg: 8, xl: 8, xxl: 8 }">
-          <Yugao class="yugao" />
-        </a-grid-item>
-        <a-grid-item
-          :span="{ xs: 24, sm: 24, md: 24, lg: 16, xl: 16, xxl: 16 }"
-        >
-          <Baogao />
-        </a-grid-item>
-      </a-grid>
-    </div>
-    <div class="mushi">
-      <Mushi />
+      <Carousel />
     </div>
   </div>
 </template>
@@ -36,7 +11,7 @@
   import Yugao from './components/yugao2.vue';
   import Baogao from './components/baogao.vue';
   import Mushi from './components/mushi.vue';
-  import Carousel from './components/carousel.vue';
+  import Carousel from './components/carousel2.vue';
   import './github.css';
 </script>
 
