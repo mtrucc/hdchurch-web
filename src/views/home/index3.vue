@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="content">
-      <Carousel />
+    <div class="bannner">
+      <Banner />
     </div>
   </div>
 </template>
@@ -12,6 +12,7 @@
   import Baogao from './components/baogao.vue';
   import Mushi from './components/mushi.vue';
   import Carousel from './components/carousel2.vue';
+  import Banner from './components/swiper.vue';
   import './github.css';
 </script>
 
@@ -36,8 +37,9 @@
   .amap {
     height: 500px;
   }
-  .content {
+  .bannner {
     // display: flex;
+    height: 340px;
   }
 
   .markdown {

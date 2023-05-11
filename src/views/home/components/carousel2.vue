@@ -3,7 +3,7 @@
     :style="{
       // width: '600px',
       width: '100%',
-      height: '360px',
+      height: '400px',
       overflow: 'hidden',
       borderRadius: '4px',
     }"
