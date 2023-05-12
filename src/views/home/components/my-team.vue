@@ -55,18 +55,5 @@
 <style scoped lang="less">
   .general-card {
     height: 310px;
-    .arco-list-item {
-      // height: 72px;
-      // padding-left: 0;
-      // padding-bottom: 12px;
-      // border-bottom: 1px solid var(--color-neutral-3);
-      &:last-child {
-        border-bottom: none;
-      }
-      .arco-list-item-meta {
-        padding: 0;
-      }
-    }
   }
-  
 </style>

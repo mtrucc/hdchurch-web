@@ -1,71 +1,67 @@
 <template>
-  <div class="general-card" title="快速导航" :body-style="{ padding: '0' }">
-    <div class="swiper-container-wrapper">
-      <div class="gallery-top">
-        <icon-left class="slidePrev-btn" />
-        <icon-right class="slideNext-btn" />
-        <swiper
-          :loop="true"
-          :navigation="{
-            prevEl: '.slidePrev-btn',
-            nextEl: '.slideNext-btn',
-          }"
-          :thumbs="{ swiper: thumbsSwiper }"
-          :modules="modules"
-          class="swiper-container"
-        >
-          <swiper-slide v-for="item in imageList" :key="item">
-            <div class="swiper-slide-content">
-              <div class="swiper-slide-caption-wrap">
-                <div class="swiper-slide-caption">
-                  <div class="swiper-slide-caption-title-line">
-                    <div class="swiper-slide-caption-title"
-                      >智驾救援项目于今日进行升级</div
-                    >
-                  </div>
-                  <div class="swiper-slide-caption-line"></div>
-                  <div class="swiper-slide-caption-desc">
-                    描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述
-                  </div>
+  <div class="swiper-container-wrapper">
+    <div class="gallery-top">
+      <icon-left class="slidePrev-btn" />
+      <icon-right class="slideNext-btn" />
+      <swiper
+        :loop="true"
+        :navigation="{
+          prevEl: '.slidePrev-btn',
+          nextEl: '.slideNext-btn',
+        }"
+        :thumbs="{ swiper: thumbsSwiper }"
+        :modules="modules"
+        class="swiper-container"
+      >
+        <swiper-slide v-for="item in imageList" :key="item">
+          <div class="swiper-slide-content">
+            <div class="swiper-slide-caption-wrap">
+              <div class="swiper-slide-caption">
+                <div class="swiper-slide-caption-title-line">
+                  <div class="swiper-slide-caption-title"
+                    >智驾救援项目于今日进行升级</div
+                  >
+                </div>
+                <div class="swiper-slide-caption-line"></div>
+                <div class="swiper-slide-caption-desc">
+                  描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述
                 </div>
               </div>
-              <img class="swiper-slide-img" :src="item" />
             </div>
-          </swiper-slide>
-        </swiper>
-      </div>
-      <div class="gallery-thumbs">
-        <swiper
-          :direction="'horizontal'"
-          :watch-slides-visibility="true"
-          :watch-overflow="true"
-          :breakpoints="{
-            576: {
-              direction: 'vertical',
-              slidesPerView: 4,
-            },
-          }"
-          :loop="true"
-          :space-between="6"
-          :slides-per-view="4"
-          :free-mode="true"
-          :watch-slides-progress="true"
-          :modules="modules"
-          class="swiper-container"
-          @swiper="setThumbsSwiper"
-        >
-          <swiper-slide v-for="item in imageList" :key="item">
-            <div class="swiper-slide-content">
-              <div class="swiper-thumbs-wrap">
-                <div class="swiper-thumbs-title"
-                  >智驾救援项目于今日进行升级</div
-                >
-              </div>
-              <img class="swiper-slide-img" :src="item" />
+            <img class="swiper-slide-img" :src="item" />
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
+    <div class="gallery-thumbs">
+      <swiper
+        :direction="'horizontal'"
+        :watch-slides-visibility="true"
+        :watch-overflow="true"
+        :breakpoints="{
+          576: {
+            direction: 'vertical',
+            slidesPerView: 4,
+          },
+        }"
+        :loop="true"
+        :space-between="6"
+        :slides-per-view="4"
+        :free-mode="true"
+        :watch-slides-progress="true"
+        :modules="modules"
+        class="swiper-container"
+        @swiper="setThumbsSwiper"
+      >
+        <swiper-slide v-for="item in imageList" :key="item">
+          <div class="swiper-slide-content">
+            <div class="swiper-thumbs-wrap">
+              <div class="swiper-thumbs-title">智驾救援项目于今日进行升级</div>
             </div>
-          </swiper-slide>
-        </swiper>
-      </div>
+            <img class="swiper-slide-img" :src="item" />
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
@@ -110,8 +106,18 @@
     border-radius: 4px;
     border: none;
     background-color: var(--color-fill-1);
-    height: 100%;
-    width: 100%;
+    .arco-list-item {
+      // height: 72px;
+      // padding-left: 0;
+      // padding-bottom: 12px;
+      // border-bottom: 1px solid var(--color-neutral-3);
+      &:last-child {
+        // border-bottom: none;
+      }
+      .arco-list-item-meta {
+        padding: 0;
+      }
+    }
   }
 </style>
 
@@ -140,6 +146,9 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
     border: none;
     border-radius: 4px;
 
@@ -213,7 +222,6 @@
         font-weight: bold;
         padding-bottom: 6px;
         border-bottom: #fff 2px solid;
-        transition: opacity 0.5s ease 0.5s;
         &-line {
           display: flex;
         }
@@ -331,7 +339,6 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      transition: opacity 0.5s ease 0.5s;
     }
   }
 </style>
