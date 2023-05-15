@@ -1,5 +1,7 @@
 <template>
-  <div class="general-card" title="快速导航" :body-style="{ padding: '0' }">
+  <div class="swiper" title="快速导航" :body-style="{ padding: '0' }">
+    <!-- <div class="swiper-title"> 网站公告 </div> -->
+    <!-- <a-alert class="swiper-banner" banner>这是一条公告</a-alert> -->
     <div class="swiper-container-wrapper">
       <div class="gallery-top">
         <icon-left class="slidePrev-btn" />
@@ -40,14 +42,14 @@
           :watch-slides-visibility="true"
           :watch-overflow="true"
           :breakpoints="{
-            576: {
+            768: {
               direction: 'vertical',
               slidesPerView: 4,
             },
           }"
           :loop="true"
-          :space-between="6"
-          :slides-per-view="4"
+          :space-between="4"
+          :slides-per-view="3"
           :free-mode="true"
           :watch-slides-progress="true"
           :modules="modules"
@@ -106,12 +108,33 @@
 </script>
 
 <style scoped lang="less">
-  .general-card {
-    border-radius: 4px;
+  .swiper {
+    // border-radius: 4px;
     border: none;
-    background-color: var(--color-fill-1);
+    // background-color: var(--color-fill-1);
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 2px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 2px 8px;
+      color: var(--color-text-2);
+      background: var(--color-fill-3);
+      color: #ffffff;
+      background: rgb(var(--primary-6));
+    }
+
+    &-banner {
+      margin-bottom: 10px;
+    }
   }
 </style>
 
@@ -141,15 +164,17 @@
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
 
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       min-height: 320px;
     }
     &-wrapper {
       display: flex;
       flex-flow: column nowrap;
-      @media (min-width: 576px) {
+      flex: 1;
+      overflow: hidden;
+      @media (min-width: 768px) {
         flex-flow: row nowrap;
       }
       height: 100%;
@@ -180,6 +205,8 @@
     &-content {
       height: 100%;
       width: 100%;
+      border-radius: 2px;
+      border: none;
     }
 
     &-caption {
@@ -268,34 +295,37 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    @media (min-width: 576px) {
+    flex: 1;
+    @media (min-width: 768px) {
       flex: 1;
       height: 100%;
-      margin-right: 6px;
+      margin-right: 4px;
     }
   }
 
   .gallery-thumbs {
     width: 100%;
-    height: 60px;
-    padding-top: 6px;
+    height: 80px;
+    margin-top: 4px;
     overflow: hidden;
     flex-shrink: 0;
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       width: 180px;
       height: 100%;
       padding: 0;
+      margin-top: 0px;
     }
     .swiper-wrapper {
       flex-direction: row;
-      @media (min-width: 576px) {
+      @media (min-width: 768px) {
         flex-direction: column;
       }
     }
     .swiper-slide {
       width: 25%;
       flex-flow: row nowrap;
-      @media (min-width: 576px) {
+      border-radius: 2px;
+      @media (min-width: 768px) {
         flex-flow: column nowrap;
         width: 100%;
       }
@@ -330,7 +360,7 @@
       line-height: 20px;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
+      // white-space: nowrap;
       transition: opacity 0.5s ease 0.5s;
     }
   }
