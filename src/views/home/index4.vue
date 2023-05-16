@@ -13,7 +13,7 @@
         <Banner />
       </div>
       <div class="bannner-right">
-        <MyTeam />
+        <!-- <MyTeam /> -->
       </div>
       <!-- <div class="bannner-right">
         <Banner />
@@ -31,12 +31,12 @@
 </template>
 
 <script lang="ts" setup>
-  import MyTeam from './components/my-team2.vue';
-  import Yugao from './components/yugao4.vue';
-  import Baogao from './components/baogao4.vue';
+  import MyTeam from './components/my-team3.vue';
+  import Yugao from './components/yugao5.vue';
+  import Baogao from './components/baogao5.vue';
   // import Mushi from './components/mushi.vue';
   // import Carousel from './components/carousel2.vue';
-  import Banner from './components/swiper.vue';
+  import Banner from './components/swiper5.vue';
   import './github.css';
 </script>
 

@@ -48,6 +48,16 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/4',
+          name: 'home4',
+          component: () => import('@/views/home/index4.vue'),
+          meta: {
+            locale: '首页4',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
       ],
     },
     {
