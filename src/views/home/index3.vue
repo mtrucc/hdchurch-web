@@ -19,15 +19,23 @@
         <Banner />
       </div> -->
     </div>
+    <div class="markdown1">
+      <div class="markdown1-left">
+        <!-- <Yugao /> -->
+      </div>
+      <div class="markdown1-right">
+        <!-- <Baogao /> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
   import MyTeam from './components/my-team2.vue';
-  import Yugao from './components/yugao4.vue';
-  import Baogao from './components/baogao4.vue';
-  import Mushi from './components/mushi.vue';
-  import Carousel from './components/carousel2.vue';
+  // import Yugao from './components/yugao4.vue';
+  // import Baogao from './components/baogao4.vue';
+  // import Mushi from './components/mushi.vue';
+  // import Carousel from './components/carousel2.vue';
   import Banner from './components/swiper.vue';
   // import './github.css';
 </script>
@@ -65,7 +73,7 @@
     &-left {
       width: 100%;
       @media (min-width: 768px) {
-        width: 280px;
+        width: 320px;
       }
     }
     &-right {

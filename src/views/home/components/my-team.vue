@@ -48,7 +48,7 @@
       id: 4,
       name: '联系我们',
       description: 'Contact Us',
-    }
+    },
   ];
 </script>
 

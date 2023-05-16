@@ -45,8 +45,8 @@
   // active-line
   import 'codemirror/addon/selection/active-line';
   // scrollbar
-  import 'codemirror/addon/scroll/simplescrollbars';
-  import 'codemirror/addon/scroll/simplescrollbars.css';
+  // import 'codemirror/addon/scroll/simplescrollbars';
+  // import 'codemirror/addon/scroll/simplescrollbars.css';
   // style
   import 'codemirror/lib/codemirror.css';
 
