@@ -1,16 +1,12 @@
 <template>
-  <a-card
-    class="general-card"
-    title="报告事项"
-    :body-style="{
-      'padding': '0',
-      'height': '100%',
-      'overflow': 'auto',
-      'max-height': '500px',
-    }"
-  >
-    <v-md-preview :text="mdData"></v-md-preview>
-  </a-card>
+  <div class="baogao">
+    <div class="baogao-title">快速导航</div>
+    <div class="baogao-content">
+      <a-scrollbar outer-class="baogao-scroll" class="baogao-scroll">
+        <v-md-preview :text="mdData"></v-md-preview>
+      </a-scrollbar>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -40,21 +36,49 @@
 </script>
 
 <style scoped lang="less">
-  .general-card {
-    border-radius: 4px;
-    border: none;
-    background-color: var(--color-fill-1);
-    .arco-list-item {
-      // height: 72px;
-      // padding-left: 0;
-      // padding-bottom: 12px;
-      // border-bottom: 1px solid var(--color-neutral-3);
-      &:last-child {
-        // border-bottom: none;
-      }
-      .arco-list-item-meta {
-        padding: 0;
-      }
+  .baogao {
+    width: 100%;
+    height: 100%;
+    background: var(--color-neutral-1);
+    // background: #fff;
+    padding: 10px;
+    // border: 1px solid var(--color-border-2);
+    // border-radius: 4px;
+    // border-right: 1px solid var(--color-border-2);
+    // padding-right: 10px;
+    // margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    :deep(.baogao-scroll) {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 2px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 2px 8px;
+      color: var(--color-text-2);
+      background: var(--color-fill-3);
+      color: rgb(255 255 255);
+      background: rgb(var(--primary-6));
+      // border-radius: 2px;
+    }
+
+    &-content {
+      overflow: auto;
+      // height: 400px;
+      width: 100%;
+      flex: 1;
+      overflow: hidden;
     }
   }
 </style>

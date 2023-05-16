@@ -1,11 +1,13 @@
 <template>
   <div class="announcement">
-    <div v-for="(item, idx) in list" :key="idx" class="item">
-      <a-tag :color="item.type" size="small">{{ item.label }}</a-tag>
-      <span class="item-content">
-        {{ item.content }}
-      </span>
-    </div>
+    <a-scrollbar outer-class="announcement-scroll" class="announcement-scroll">
+      <div v-for="(item, idx) in list" :key="idx" class="item">
+        <a-tag :color="item.type" size="small">{{ item.label }}</a-tag>
+        <span class="item-content">
+          {{ item.content }}
+        </span>
+      </div>
+    </a-scrollbar>
   </div>
 </template>
 
@@ -64,6 +66,17 @@
     width: 100%;
     height: 100%;
     overflow: auto;
+
+    &-scroll {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+    :deep(.announcement-scroll) {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
   }
   .item {
     display: flex;

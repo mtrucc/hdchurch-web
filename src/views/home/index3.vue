@@ -21,10 +21,10 @@
     </div>
     <div class="markdown1">
       <div class="markdown1-left">
-        <!-- <Yugao /> -->
+        <Yugao />
       </div>
       <div class="markdown1-right">
-        <!-- <Baogao /> -->
+        <Baogao />
       </div>
     </div>
   </div>
@@ -32,12 +32,12 @@
 
 <script lang="ts" setup>
   import MyTeam from './components/my-team2.vue';
-  // import Yugao from './components/yugao4.vue';
-  // import Baogao from './components/baogao4.vue';
+  import Yugao from './components/yugao4.vue';
+  import Baogao from './components/baogao4.vue';
   // import Mushi from './components/mushi.vue';
   // import Carousel from './components/carousel2.vue';
   import Banner from './components/swiper.vue';
-  // import './github.css';
+  import './github.css';
 </script>
 
 <script lang="ts">
@@ -66,7 +66,8 @@
 
   .markdown1 {
     display: flex;
-    margin-top: 20px;
+    margin-top: 12px;
+    height: 500px;
     @media (max-width: 768px) {
       flex-direction: column;
     }
@@ -74,7 +75,9 @@
       width: 100%;
       @media (min-width: 768px) {
         width: 320px;
+        // border-right: 1px solid var(--color-border-2);
       }
+      margin-right: 12px;
     }
     &-right {
       // @media (max-width: 768px) {

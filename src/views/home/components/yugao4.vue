@@ -2,7 +2,9 @@
   <div class="yugao">
     <div class="yugao-title">快速导航</div>
     <div class="yugao-content">
-      <v-md-preview :text="mdData"></v-md-preview>
+      <a-scrollbar outer-class="yugao-scroll" class="yugao-scroll">
+        <v-md-preview :text="mdData"></v-md-preview>
+      </a-scrollbar>
     </div>
   </div>
 </template>
@@ -37,9 +39,9 @@
   .yugao {
     width: 100%;
     height: 100%;
-    // background: var(--color-neutral-1);
+    background: var(--color-neutral-1);
     // background: #fff;
-    // padding: 10px;
+    padding: 10px;
     // border: 1px solid var(--color-border-2);
     // border-radius: 4px;
     // border-right: 1px solid var(--color-border-2);
@@ -49,6 +51,12 @@
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
+
+    :deep(.yugao-scroll) {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
 
     &-title {
       font-size: 16px;
@@ -67,8 +75,10 @@
 
     &-content {
       overflow: auto;
-      height: 400px;
+      // height: 400px;
       width: 100%;
+      flex: 1;
+      overflow: hidden;
     }
   }
 </style>

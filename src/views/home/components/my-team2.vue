@@ -63,7 +63,7 @@
   .kuaisudaohang {
     width: 100%;
     height: 100%;
-    // background: var(--color-neutral-1);
+    background: var(--color-neutral-1);
     // background: #fff;
     // padding: 10px;
     // border: 1px solid var(--color-border-2);
@@ -75,6 +75,8 @@
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
+    // background: #fff;
+    padding: 10px;
 
     &-qrCode {
       display: flex;
