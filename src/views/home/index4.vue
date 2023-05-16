@@ -19,14 +19,14 @@
         <Banner />
       </div> -->
     </div>
-    <div class="markdown1">
+    <!-- <div class="markdown1">
       <div class="markdown1-left">
         <Yugao />
       </div>
       <div class="markdown1-right">
         <Baogao />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -66,7 +66,7 @@
 
   .markdown1 {
     display: flex;
-    margin-top: 16px;
+    margin-top: 12px;
     height: 500px;
     @media (max-width: 768px) {
       flex-direction: column;
@@ -77,7 +77,7 @@
         width: 320px;
         // border-right: 1px solid var(--color-border-2);
       }
-      margin-right: 16px;
+      margin-right: 12px;
     }
     &-right {
       // @media (max-width: 768px) {

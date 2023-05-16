@@ -40,10 +40,15 @@
     width: 100%;
     height: 100%;
     background: var(--color-neutral-1);
+    // background-image: url(/src/assets/images/1.jpg);
+    // background-color: var(--color-fill-1);
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     // background: #fff;
     padding: 10px;
     // border: 1px solid var(--color-border-2);
-    // border-radius: 4px;
+    border-radius: 4px;
     // border-right: 1px solid var(--color-border-2);
     // padding-right: 10px;
     // margin-right: 10px;

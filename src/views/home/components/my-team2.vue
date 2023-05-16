@@ -151,7 +151,7 @@
       justify-content: space-between;
       //单元格的大小是固定的，但是容器的大小不确定。如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充
       // grid-template-columns: repeat(auto-fill, 115px);
-      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
       width: 100%;
       flex-shrink: 0;
       &-item {
