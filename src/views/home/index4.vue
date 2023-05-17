@@ -13,7 +13,7 @@
         <Banner />
       </div>
       <div class="bannner-right">
-        <!-- <MyTeam /> -->
+        <MyTeam />
       </div>
       <!-- <div class="bannner-right">
         <Banner />
@@ -96,7 +96,7 @@
   .bannner {
     display: flex;
     @media (min-width: 768px) {
-      height: 400px;
+      height: 370px;
     }
     @media (max-width: 768px) {
       flex-direction: column;

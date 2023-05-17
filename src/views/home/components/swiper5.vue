@@ -42,7 +42,7 @@
           :watch-slides-visibility="true"
           :watch-overflow="true"
           :loop="false"
-          :space-between="6"
+          :space-between="4"
           :slides-per-view="4"
           :free-mode="true"
           :watch-slides-progress="true"
@@ -168,9 +168,9 @@
       flex-flow: column nowrap;
       flex: 1;
       overflow: hidden;
-      @media (min-width: 768px) {
-        flex-flow: row nowrap;
-      }
+      // @media (min-width: 768px) {
+      //   flex-flow: row nowrap;
+      // }
       height: 100%;
       width: 100%;
     }
@@ -299,11 +299,9 @@
 
   .gallery-thumbs {
     width: 100%;
-    height: 110px;
+    height: 60px;
     overflow: hidden;
-    position: absolute;
-    padding: 10px;
-    bottom: 0;
+    margin-top: 4px;
     // @media (min-width: 768px) {
     //   width: 180px;
     //   // height: 100%;

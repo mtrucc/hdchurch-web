@@ -1,8 +1,8 @@
 <template>
   <div class="content">
-    <!-- <NavBar /> -->
+    <NavBar />
     <PageLayout />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
