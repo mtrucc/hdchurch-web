@@ -1,6 +1,6 @@
 <template>
   <div class="yugao">
-    <div class="yugao-title">快速导航</div>
+    <div class="yugao-title">主日预告</div>
     <div class="yugao-content">
       <a-scrollbar outer-class="yugao-scroll" class="yugao-scroll">
         <v-md-preview :text="mdData"></v-md-preview>
@@ -39,7 +39,7 @@
   .yugao {
     width: 100%;
     height: 100%;
-    background: var(--color-neutral-1);
+    // background: var(--color-neutral-1);
     // background-image: url(/src/assets/images/1.jpg);
     // background-color: var(--color-fill-1);
     // background-position: center center;
@@ -52,6 +52,8 @@
     // border-right: 1px solid var(--color-border-2);
     // padding-right: 10px;
     // margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;

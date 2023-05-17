@@ -1,6 +1,6 @@
 <template>
   <div class="baogao">
-    <div class="baogao-title">快速导航</div>
+    <div class="baogao-title">报告事项</div>
     <div class="baogao-content">
       <a-scrollbar outer-class="baogao-scroll" class="baogao-scroll">
         <v-md-preview :text="mdData"></v-md-preview>
@@ -39,7 +39,7 @@
   .baogao {
     width: 100%;
     height: 100%;
-    background: var(--color-neutral-1);
+    // background: var(--color-neutral-1);
     // background: #fff;
     padding: 10px;
     // border: 1px solid var(--color-border-2);
@@ -47,6 +47,8 @@
     // border-right: 1px solid var(--color-border-2);
     // padding-right: 10px;
     // margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;

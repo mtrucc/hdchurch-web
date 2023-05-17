@@ -10,23 +10,23 @@
     </a-alert> -->
     <div class="bannner">
       <div class="bannner-left">
-        <Banner />
+        <MyTeam />
       </div>
       <div class="bannner-right">
-        <MyTeam />
+        <Banner />
       </div>
       <!-- <div class="bannner-right">
         <Banner />
       </div> -->
     </div>
-    <!-- <div class="markdown1">
+    <div class="markdown1">
       <div class="markdown1-left">
         <Yugao />
       </div>
       <div class="markdown1-right">
         <Baogao />
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -96,17 +96,17 @@
   .bannner {
     display: flex;
     @media (min-width: 768px) {
-      height: 370px;
+      height: 400px;
     }
     @media (max-width: 768px) {
       flex-direction: column;
     }
-    &-right {
+    &-left {
       width: 320px;
       flex-shrink: 0;
       // border-right: 1px solid var(--color-border-2);
-      // margin-right: 10px;
-      margin-left: 16px;
+      margin-right: 16px;
+      // margin-left: 16px;
       @media (max-width: 768px) {
         flex-direction: column;
         margin-left: 0;
@@ -114,7 +114,7 @@
         width: 100%;
       }
     }
-    &-left {
+    &-right {
       overflow: hidden;
       @media (min-width: 768px) {
         flex: 1;

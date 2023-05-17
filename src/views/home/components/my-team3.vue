@@ -29,31 +29,41 @@
 
 <script lang="ts" setup>
   import QrImg from '@/assets/images/MFJhoDoqAtQA.png';
+  import TestImg1 from '@/assets/images/1.jpg';
+  import TestImg2 from '@/assets/images/2.jpg';
+  import TestImg3 from '@/assets/images/3.jpg';
+  import TestImg4 from '@/assets/images/4.jpg';
+  import TestImg5 from '@/assets/images/5.jpg';
+  import TestImg6 from '@/assets/images/6.jpg';
+  import TestImg7 from '@/assets/images/7.jpg';
+  import TestImg8 from '@/assets/images/8.jpg';
+
+
   import Announcement from './announcement.vue';
 
   const teamList = [
     {
-      avatar: 'https://swiperjs.com/demos/images/nature-1.jpg',
+      avatar: TestImg4,
       id: 1,
-      name: '文本文本',
+      name: '主日证道',
       description: 'Sunday Sermon',
     },
     {
-      avatar: 'https://swiperjs.com/demos/images/nature-2.jpg',
+      avatar: TestImg5,
       id: 2,
-      name: '文本文本',
+      name: '主日献诗',
       description: 'Choral Worship',
     },
     {
-      avatar: 'https://swiperjs.com/demos/images/nature-3.jpg',
+      avatar: TestImg6,
       id: 3,
-      name: '文本文本',
+      name: '海淀聚会点',
       description: 'Branch of HDChurch',
     },
     {
-      avatar: 'https://swiperjs.com/demos/images/nature-4.jpg',
+      avatar: TestImg3,
       id: 4,
-      name: '文本文本',
+      name: '联系我们',
       description: 'Contact Us',
     },
   ];
@@ -76,7 +86,16 @@
     align-items: flex-start;
     flex-shrink: 0;
     // background: #fff;
-    // padding: 10px;
+    padding: 10px;
+
+    // background-image: url(/src/assets/images/1.jpg);
+    // background-color: var(--color-fill-1);
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
 
     &-qrCode {
       display: flex;
@@ -155,10 +174,11 @@
       width: 100%;
       flex-shrink: 0;
       &-item {
-        height: 80px;
-        display: grid;
+        height: 70px;
+        display: flex;
         justify-content: center;
         align-content: center;
+        align-items: center;
         border-radius: 4px;
         background-color: var(--color-fill-1);
         background-position: center center;
@@ -178,9 +198,20 @@
         // flex-direction: column;
         // margin-bottom: 6px;
         &-title {
-          font-size: 16px;
+          // font-size: 18px;
+          // font-weight: 500;
+          // color: #fff;
+          font-size: 18px;
           font-weight: 500;
-          color: #fff;
+          color: #7c6565;
+          // width: 100%;
+          // height: 100%;
+          // background-color: rgb(255 255 255 / 10%);
+          // backdrop-filter: blur(3px);
+          // text-align: center;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
           // margin-top: 10px;
         }
       }

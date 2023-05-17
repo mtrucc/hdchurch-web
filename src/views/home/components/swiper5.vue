@@ -22,12 +22,12 @@
                 <div class="swiper-slide-caption">
                   <div class="swiper-slide-caption-title-line">
                     <div class="swiper-slide-caption-title"
-                      >智驾救援项目于今日进行升级</div
+                      >北京市基督教海淀堂2023年05月21日礼拜</div
                     >
                   </div>
                   <div class="swiper-slide-caption-line"></div>
                   <div class="swiper-slide-caption-desc">
-                    描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述
+                    北京市基督教海淀堂2023年05月21日礼拜信息如下：第一堂、第二堂、第三堂、第四堂
                   </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@
             <div class="swiper-slide-content">
               <div class="swiper-thumbs-wrap">
                 <div class="swiper-thumbs-title"
-                  >智驾救援项目于今日进行升级</div
+                  >北京市基督教海淀堂2023年05月21日礼拜</div
                 >
               </div>
               <img class="swiper-slide-img" :src="item" />
@@ -70,6 +70,15 @@
   import { ref } from 'vue';
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  import TestImg1 from '@/assets/images/1.jpg';
+  import TestImg2 from '@/assets/images/2.jpg';
+  import TestImg3 from '@/assets/images/3.jpg';
+  import TestImg4 from '@/assets/images/4.jpg';
+  import TestImg5 from '@/assets/images/5.jpg';
+  import TestImg6 from '@/assets/images/6.jpg';
+  import TestImg7 from '@/assets/images/7.jpg';
+  import TestImg8 from '@/assets/images/8.jpg';
 
   // Import Swiper styles
   import 'swiper/css';
@@ -89,15 +98,26 @@
 
   const modules = [Navigation, Thumbs, FreeMode];
 
+  // const imageList = [
+  //   'https://swiperjs.com/demos/images/nature-1.jpg',
+  //   'https://swiperjs.com/demos/images/nature-2.jpg',
+  //   'https://swiperjs.com/demos/images/nature-3.jpg',
+  //   'https://swiperjs.com/demos/images/nature-4.jpg',
+  //   'https://swiperjs.com/demos/images/nature-5.jpg',
+  //   'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/cd7a1aaea8e1c5e3d26fe2591e561798.png~tplv-uwbnlip3yd-webp.webp',
+  //   'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/6480dbc69be1b5de95010289787d64f1.png~tplv-uwbnlip3yd-webp.webp',
+  //   'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/0265a04fddbd77a19602a15d9d55d797.png~tplv-uwbnlip3yd-webp.webp',
+  // ];
+
   const imageList = [
-    'https://swiperjs.com/demos/images/nature-1.jpg',
-    'https://swiperjs.com/demos/images/nature-2.jpg',
-    'https://swiperjs.com/demos/images/nature-3.jpg',
-    'https://swiperjs.com/demos/images/nature-4.jpg',
-    'https://swiperjs.com/demos/images/nature-5.jpg',
-    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/cd7a1aaea8e1c5e3d26fe2591e561798.png~tplv-uwbnlip3yd-webp.webp',
-    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/6480dbc69be1b5de95010289787d64f1.png~tplv-uwbnlip3yd-webp.webp',
-    'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/0265a04fddbd77a19602a15d9d55d797.png~tplv-uwbnlip3yd-webp.webp',
+    TestImg1,
+    TestImg2,
+    TestImg3,
+    TestImg4,
+    TestImg5,
+    TestImg6,
+    TestImg7,
+    TestImg8,
   ];
 </script>
 
@@ -299,7 +319,7 @@
 
   .gallery-thumbs {
     width: 100%;
-    height: 60px;
+    height: 70px;
     overflow: hidden;
     margin-top: 4px;
     // @media (min-width: 768px) {
@@ -337,8 +357,10 @@
       left: 0;
       padding: 6px;
       width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
+      align-items: flex-end;
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0,
