@@ -178,7 +178,7 @@
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
 
     // @media (min-width: 768px) {
     //   min-height: 320px;
@@ -219,7 +219,7 @@
     &-content {
       height: 100%;
       width: 100%;
-      border-radius: 2px;
+      border-radius: 4px;
       border: none;
     }
 
@@ -337,7 +337,7 @@
     .swiper-slide {
       width: 25%;
       flex-flow: row nowrap;
-      border-radius: 2px;
+      border-radius: 4px;
       @media (min-width: 768px) {
         flex-flow: column nowrap;
         width: 100%;

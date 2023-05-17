@@ -201,9 +201,15 @@
           // font-size: 18px;
           // font-weight: 500;
           // color: #fff;
-          font-size: 18px;
-          font-weight: 500;
-          color: #7c6565;
+          font-size: 16px;
+          font-weight: 400;
+          // color: #7c6565;
+          // color: #d8d8d8;
+          color: var(--color-text-2);
+          padding: 3px 5px;
+          background: rgb(var(--gray-3), 0.7);
+          border-radius: 2px;
+          // background: #9e6a27;
           // width: 100%;
           // height: 100%;
           // background-color: rgb(255 255 255 / 10%);

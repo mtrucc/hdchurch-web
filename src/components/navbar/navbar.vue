@@ -13,7 +13,7 @@
           mode="horizontal"
           class="header-menu"
         >
-          <a-sub-menu key="0">
+          <a-sub-menu key="0" class="header-menu-sub">
             <template #icon><icon-apps></icon-apps></template>
             <template #title>首页</template>
             <a-menu-item key="0_0">Menu 1</a-menu-item>
@@ -21,14 +21,14 @@
             <a-menu-item key="0_2">Menu 3</a-menu-item>
             <a-menu-item key="0_3">Menu 4</a-menu-item>
           </a-sub-menu>
-          <a-sub-menu key="1">
+          <a-sub-menu key="1" class="header-menu-sub">
             <template #icon><icon-bug></icon-bug></template>
             <template #title>教会信息</template>
             <a-menu-item key="1_0">Menu 1</a-menu-item>
             <a-menu-item key="1_1">Menu 2</a-menu-item>
             <a-menu-item key="1_2">Menu 3</a-menu-item>
           </a-sub-menu>
-          <a-sub-menu key="2">
+          <a-sub-menu key="2" class="header-menu-sub">
             <template #icon><icon-bulb></icon-bulb></template>
             <template #title>主日证道</template>
             <a-menu-item key="2_0">Menu 1</a-menu-item>
@@ -38,7 +38,7 @@
               <a-menu-item key="2_2_1">Menu 2</a-menu-item>
             </a-sub-menu>
           </a-sub-menu>
-          <a-sub-menu key="2">
+          <a-sub-menu key="2" class="header-menu-sub">
             <template #icon><icon-bulb></icon-bulb></template>
             <template #title>线上奉献</template>
             <a-menu-item key="2_0">Menu 1</a-menu-item>
@@ -48,7 +48,7 @@
               <a-menu-item key="2_2_1">Menu 2</a-menu-item>
             </a-sub-menu>
           </a-sub-menu>
-          <a-sub-menu key="2">
+          <a-sub-menu key="2" class="header-menu-sub">
             <template #title>更多内容</template>
             <a-menu-item key="2_0">Menu 1</a-menu-item>
             <a-menu-item key="2_1">Menu 2</a-menu-item>
@@ -92,8 +92,10 @@
     display: flex;
     justify-content: space-between;
     height: 70px;
-    background-color: var(--color-bg-2);
+    // background-color: var(--color-bg-2);
+    background-color: rgb(255 255 255 / 85%);
     border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(3px);
 
     &-wrap {
       width: 100%;
@@ -106,7 +108,7 @@
     }
 
     &-center {
-      flex: 1;
+      // flex: 1;
       height: 100%;
       display: flex;
     }
@@ -124,10 +126,21 @@
     }
 
     &-menu {
-      :deep(.arco-menu-overflow-wrap) {
-        display: flex;
-        justify-content: flex-end;
+      // :deep(.arco-menu-overflow-wrap) {
+      //   display: flex;
+      //   justify-content: flex-end;
+      // }
+      :deep(.header-menu-sub) {
+        background-color: unset;
       }
+      :deep(.arco-menu-overflow-sub-menu) {
+        background-color: unset;
+      }
+      background-color: unset;
+      // backdrop-filter: blur(3px);
+      // &-sub {
+      //   background-color: unset;
+      // }
     }
   }
 </style>

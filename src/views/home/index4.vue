@@ -67,9 +67,11 @@
   .markdown1 {
     display: flex;
     margin-top: 12px;
-    height: 500px;
     @media (max-width: 768px) {
       flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      height: 500px;
     }
     &-left {
       width: 100%;
@@ -112,6 +114,7 @@
         margin-left: 0;
         margin-top: 6px;
         width: 100%;
+        margin-bottom: 10px;
       }
     }
     &-right {
