@@ -1,6 +1,6 @@
 <template>
   <div class="kuaisudaohang">
-    <!-- <div class="kuaisudaohang-title">快速导航</div> -->
+    <div class="kuaisudaohang-title">快速导航</div>
     <div class="kuaisudaohang-content">
       <div
         v-for="item in teamList"
@@ -12,6 +12,17 @@
       >
         <div class="kuaisudaohang-content-item-title">{{ item.name }}</div>
       </div>
+    </div>
+    <div class="kuaisudaohang-title2">最新动态</div>
+    <div class="kuaisudaohang-qrCode">
+      <Announcement />
+      <!-- 这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本 -->
+      <!-- <div class="kuaisudaohang-qrCode-img-wrap">
+        <img :src="QrImg" alt="" class="kuaisudaohang-qrCode-img" />
+      </div>
+      <div class="kuaisudaohang-qrCode-img-wrap">
+        <img :src="QrImg" alt="" class="kuaisudaohang-qrCode-img" />
+      </div> -->
     </div>
   </div>
 </template>
@@ -46,37 +57,13 @@
     {
       avatar: TestImg6,
       id: 3,
-      name: '初次来访',
+      name: '海淀聚会点',
       description: 'Branch of HDChurch',
     },
     {
       avatar: TestImg3,
       id: 4,
-      name: '基本要道',
-      description: 'Contact Us',
-    },
-    {
-      avatar: TestImg3,
-      id: 4,
-      name: '团契介绍',
-      description: 'Contact Us',
-    },
-    {
-      avatar: TestImg3,
-      id: 4,
-      name: '分堂聚会点',
-      description: 'Contact Us',
-    },
-    {
-      avatar: TestImg3,
-      id: 4,
-      name: '预留',
-      description: 'Contact Us',
-    },
-    {
-      avatar: TestImg3,
-      id: 4,
-      name: '预留',
+      name: '联系我们',
       description: 'Contact Us',
     },
   ];
@@ -99,7 +86,7 @@
     align-items: flex-start;
     flex-shrink: 0;
     // background: #fff;
-    // padding: 10px;
+    padding: 10px;
 
     // background-image: url(/src/assets/images/1.jpg);
     // background-color: var(--color-fill-1);
@@ -107,8 +94,8 @@
     // background-repeat: no-repeat;
     // background-size: cover;
 
-    // background-color: rgba(255, 255, 255, 0.2);
-    // backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
 
     &-qrCode {
       display: flex;
@@ -187,7 +174,7 @@
       width: 100%;
       flex-shrink: 0;
       &-item {
-        height: 75px;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-content: center;

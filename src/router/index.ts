@@ -58,6 +58,16 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/5',
+          name: 'home5',
+          component: () => import('@/views/home/index5.vue'),
+          meta: {
+            locale: '首页5',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
       ],
     },
     {
