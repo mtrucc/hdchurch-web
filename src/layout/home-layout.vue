@@ -71,10 +71,10 @@
   .content {
     // background-color: var(--color-fill-1);
     padding: 70px 0 0 0;
-    background-image: url('@/assets/images/2.jpg');
-    background-color: var(--color-fill-1);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url('@/assets/images/2.jpg');
+    // background-color: var(--color-fill-1);
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 </style>

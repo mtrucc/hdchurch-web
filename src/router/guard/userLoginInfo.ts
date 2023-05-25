@@ -32,23 +32,33 @@ export default function setupUserLoginInfoGuard(router: Router) {
         next();
         return;
       }
-      if (to.name === 'home') {
-        next();
-        return;
-      }
-      if (to.name === 'home2') {
-        next();
-        return;
-      }
-      if (to.name === 'home3') {
-        next();
-        return;
-      }
-      if (to.name === 'home4') {
-        next();
-        return;
-      }
-      if (to.name === 'home5') {
+      // if (to.name === 'home') {
+      //   next();
+      //   return;
+      // }
+      // if (to.name === 'home2') {
+      //   next();
+      //   return;
+      // }
+      // if (to.name === 'home3') {
+      //   next();
+      //   return;
+      // }
+      // if (to.name === 'home4') {
+      //   next();
+      //   return;
+      // }
+      // if (to.name === 'home5') {
+      //   next();
+      //   return;
+      // }
+      // if (to.name === 'home6') {
+      //   next();
+      //   return;
+      // }
+      // 如果包含home 跳过
+      // @ts-ignore
+      if (to.name?.includes('home')) {
         next();
         return;
       }

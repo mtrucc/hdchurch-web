@@ -13,6 +13,19 @@
         <div class="kuaisudaohang-content-item-title">{{ item.name }}</div>
       </div>
     </div>
+    <!-- <div class="kuaisudaohang-title2">最新动态</div> -->
+    <div class="kuaisudaohang-qrCode">
+      <div class="time">{{ time }}</div>
+      <div class="welcome">欢迎光临北京市基督教海淀堂</div>
+      <!-- <Announcement /> -->
+      <!-- 这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本这是一段超级超级超级长的文本 -->
+      <!-- <div class="kuaisudaohang-qrCode-img-wrap">
+        <img :src="QrImg" alt="" class="kuaisudaohang-qrCode-img" />
+      </div>
+      <div class="kuaisudaohang-qrCode-img-wrap">
+        <img :src="QrImg" alt="" class="kuaisudaohang-qrCode-img" />
+      </div> -->
+    </div>
   </div>
 </template>
 
@@ -70,7 +83,7 @@
     {
       avatar: TestImg3,
       id: 4,
-      name: '预留',
+      name: '事工动态',
       description: 'Contact Us',
     },
     {
@@ -80,6 +93,18 @@
       description: 'Contact Us',
     },
   ];
+
+  // const time = new Date().toLocaleString();
+
+  // 返回 2023年05月25日 星期三 星期前要带空格
+  const time = new Date().toLocaleDateString('zh', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    weekday: 'long',
+  });
+
+
 </script>
 
 <style scoped lang="less">
@@ -110,32 +135,31 @@
     // background-color: rgba(255, 255, 255, 0.2);
     // backdrop-filter: blur(3px);
 
+    .time {
+      font-size: 20px;
+      color: var(--color-text-1);
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .welcome {
+      font-size: 14px;
+      color: var(--color-text-2);
+      margin-top: 10px;
+      text-align: center;
+    }
+
     &-qrCode {
       display: flex;
       flex: 1;
       display: flex;
-      justify-content: space-around;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
       align-items: center;
       overflow: hidden;
-      &-img {
-        width: 100%;
-        &-wrap {
-          border: 1px solid var(--color-border-2);
-          margin: 0 5px 0 0;
-          flex: 1;
-          overflow: hidden;
-          border-radius: 4px;
-          align-items: center;
-          // padding: 5px;
-          // background: var(--color-fill-1);
-          // background-color: var(--color-bg-2);
-          // border-radius: 8px;
-          // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.050980392156862744);
-          // text-align: center;
-          // margin-right: 20px;
-        }
-      }
+
     }
 
     &-jieshao {
@@ -187,7 +211,7 @@
       width: 100%;
       flex-shrink: 0;
       &-item {
-        height: 75px;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-content: center;

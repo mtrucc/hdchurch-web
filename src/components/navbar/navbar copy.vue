@@ -6,16 +6,50 @@
       </div>
       <div class="header-center">
         <a-menu
+          :style="{ borderRadius: '4px' }"
+          :collapsed="collapsed"
           :default-open-keys="['0']"
-          :default-selected-keys="['1']"
+          :default-selected-keys="['0_2']"
           mode="horizontal"
           class="header-menu"
         >
-          <a-menu-item key="1">首页</a-menu-item>
-          <a-menu-item key="2">教会信息</a-menu-item>
-          <a-menu-item key="3">主日聚会</a-menu-item>
-          <a-menu-item key="4">资源分享</a-menu-item>
-          <a-menu-item key="5">线上奉献</a-menu-item>
+          <a-sub-menu key="0" class="header-menu-sub">
+            <template #icon><icon-apps></icon-apps></template>
+            <template #title>首页</template>
+          </a-sub-menu>
+          <a-sub-menu key="1" class="header-menu-sub">
+            <template #icon><icon-bug></icon-bug></template>
+            <template #title>教会信息</template>
+          </a-sub-menu>
+          <a-sub-menu key="2" class="header-menu-sub">
+            <template #icon><icon-bulb></icon-bulb></template>
+            <template #title>主日证道</template>
+            <a-menu-item key="2_0">Menu 1</a-menu-item>
+            <a-menu-item key="2_1">Menu 2</a-menu-item>
+            <a-sub-menu key="2_2" title="Navigation 4">
+              <a-menu-item key="2_2_0">Menu 1</a-menu-item>
+              <a-menu-item key="2_2_1">Menu 2</a-menu-item>
+            </a-sub-menu>
+          </a-sub-menu>
+          <a-sub-menu key="2" class="header-menu-sub">
+            <template #icon><icon-bulb></icon-bulb></template>
+            <template #title>线上奉献</template>
+            <a-menu-item key="2_0">Menu 1</a-menu-item>
+            <a-menu-item key="2_1">Menu 2</a-menu-item>
+            <a-sub-menu key="2_2" title="Navigation 4">
+              <a-menu-item key="2_2_0">Menu 1</a-menu-item>
+              <a-menu-item key="2_2_1">Menu 2</a-menu-item>
+            </a-sub-menu>
+          </a-sub-menu>
+          <a-sub-menu key="2" class="header-menu-sub">
+            <template #title>更多内容</template>
+            <a-menu-item key="2_0">Menu 1</a-menu-item>
+            <a-menu-item key="2_1">Menu 2</a-menu-item>
+            <a-sub-menu key="2_2" title="Navigation 4">
+              <a-menu-item key="2_2_0">Menu 1</a-menu-item>
+              <a-menu-item key="2_2_1">Menu 2</a-menu-item>
+            </a-sub-menu>
+          </a-sub-menu>
         </a-menu>
       </div>
       <div class="header-right">
@@ -67,7 +101,7 @@
     }
 
     &-center {
-      flex: 1;
+      // flex: 1;
       height: 100%;
       display: flex;
     }
@@ -85,8 +119,6 @@
     }
 
     &-menu {
-      flex: 1;
-      margin-left: 20px;
       // :deep(.arco-menu-overflow-wrap) {
       //   display: flex;
       //   justify-content: flex-end;
@@ -94,11 +126,9 @@
       :deep(.header-menu-sub) {
         background-color: unset;
       }
-
       :deep(.arco-menu-overflow-sub-menu) {
         background-color: unset;
       }
-
       background-color: unset;
       // backdrop-filter: blur(3px);
       // &-sub {
