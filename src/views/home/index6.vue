@@ -98,7 +98,7 @@
 
   .markdown2 {
     display: flex;
-    height: 300px;
+    height: 500px;
     margin-top: 12px;
   }
 
