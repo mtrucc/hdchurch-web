@@ -5,35 +5,26 @@
         <a-tab-pane key="1" title="主日证道">
           <div class="list">
             <a-scrollbar outer-class="yugao-scroll" class="yugao-scroll">
-              <div v-for="item in 5" :key="item" class="list-item">
+              <div v-for="item in postList" :key="item.desc" class="list-item">
                 <div class="list-image">
-                  <img :src="TestImg4" alt="" />
+                  <img :src="item.image[0]" alt="" />
                 </div>
                 <div class="list-content">
-                  <div class="list-title"
-                    >2023年05月26日 第一堂 放下重担 仰望耶稣</div
-                  >
+                  <div class="list-title">{{ item.title }}</div>
                   <a-typography-paragraph
                     :ellipsis="{
                       rows: 3,
                     }"
                     class="list-typography"
                   >
-                    [希伯来书 12:1]
-                    我们既有这许多的见证人、如同云彩围着我们、就当放下各样的重担、脱去容易缠累我们的罪、存心忍耐、奔那摆在我们前头的路程、
-                    [希伯来书 12:2]
-                    仰望为我们信心创始成终的耶稣．〔或作仰望那将真道创始成终的耶稣〕他因那摆在前面的喜乐、就轻看羞辱、忍受了十字架的苦难、便坐在神宝座的右边。
-                    [希伯来书 12:3]
-                    那忍受罪人这样顶撞的、你们要思想、免得疲倦灰心。
+                    {{ item.desc }}
                   </a-typography-paragraph>
                   <!-- <div class="list-descriptio">
 
                   </div> -->
                   <div class="list-info">
-                    证道人：<span class="list-author">证道人</span> 时间：<span
-                      class="list-date"
-                      >2023年05月26日</span
-                    >
+                    主讲人：<span class="list-author">{{ item.author }}</span>
+                    时间：<span class="list-date">{{ item.date }}</span>
                   </div>
                 </div>
               </div>
@@ -93,6 +84,10 @@
   import TestImg6 from '@/assets/images/6.jpg';
   import TestImg7 from '@/assets/images/7.jpg';
   import TestImg8 from '@/assets/images/8.jpg';
+
+  import list from './list.json';
+
+  const postList = ref(list);
 </script>
 
 <style scoped lang="less">
@@ -194,7 +189,7 @@
 
       &-title {
         font-size: 16px;
-        font-weight: 500;
+        // font-weight: 500;
         // margin-top: 2px;
         margin-bottom: 4px;
         // font-size: 14px;
@@ -205,6 +200,7 @@
         // color: rgb(255 255 255);
         // background: rgb(var(--primary-6));
         // border-radius: 2px;
+        // text-decoration: underline;
       }
 
       &-content {
@@ -235,7 +231,14 @@
       &-author {
         margin-right: 10px;
         color: var(--color-text-2);
-        font-weight: bold;
+        // 下划线
+        text-decoration: underline;
+        // font-weight: bold;
+      }
+
+      &-date {
+        color: var(--color-text-2);
+        text-decoration: underline;
       }
     }
   }
