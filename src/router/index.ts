@@ -78,6 +78,56 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/7',
+          name: 'home7',
+          component: () => import('@/views/home/index7.vue'),
+          meta: {
+            locale: '首页7',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/8',
+          name: 'home8',
+          component: () => import('@/views/home/index8.vue'),
+          meta: {
+            locale: '首页8',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/9',
+          name: 'home9',
+          component: () => import('@/views/home/index9.vue'),
+          meta: {
+            locale: '首页9',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/10',
+          name: 'home10',
+          component: () => import('@/views/home/index10.vue'),
+          meta: {
+            locale: '首页10',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        // {
+        //   path: '/11',
+        //   name: 'home11',
+        //   component: () => import('@/views/home/index11.vue'),
+        //   meta: {
+        //     locale: '首页11',
+        //     requiresAuth: false,
+        //     roles: ['*'],
+        //   },
+        // },
       ],
     },
     {

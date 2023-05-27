@@ -34,13 +34,13 @@
 </template>
 
 <script lang="ts" setup>
-  import MyTeam from './components/my-team3.vue';
-  import Yugao from './components/yugao6.vue';
-  import Baogao from './components/baogao6.vue';
+  import MyTeam from './components/my-team3h7.vue';
+  import Yugao from './components/yugao6h7.vue';
+  import Baogao from './components/baogao6h7.vue';
   import Guanzhu from './components/guanzhu.vue';
-  import List from './components/list.vue';
+  import List from './components/listh7.vue';
   // import Carousel from './components/carousel2.vue';
-  import Banner from './components/swiper5.vue';
+  import Banner from './components/swiper5h7.vue';
   import './github.css';
 </script>
 
@@ -52,8 +52,6 @@
 
 <style scoped lang="less">
   .container {
-    max-width: 1152px;
-    margin: 0 auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -69,6 +67,8 @@
   }
 
   .markdown1 {
+    max-width: 1152px;
+    margin: 0 auto;
     display: flex;
     margin-top: 12px;
     @media (max-width: 768px) {
@@ -76,11 +76,13 @@
     }
     @media (min-width: 768px) {
       height: 450px;
+      width: 100%;
     }
     &-left {
       width: 100%;
       @media (min-width: 768px) {
-        width: 320px;
+        width: 330px;
+        flex-shrink: 0;
         // border-right: 1px solid var(--color-border-2);
       }
       margin-right: 12px;
@@ -92,13 +94,16 @@
 
       @media (min-width: 768px) {
         flex: 1;
+        overflow: hidden;
       }
     }
   }
 
   .markdown2 {
     display: flex;
-    height: 500px;
+    height: 350px;
+    max-width: 1152px;
+    margin: 0 auto;
     margin-top: 12px;
   }
 
@@ -106,15 +111,18 @@
     height: 500px;
   }
   .bannner {
+    max-width: 1152px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     @media (min-width: 768px) {
-      height: 380px;
+      height: 400px;
     }
     @media (max-width: 768px) {
       flex-direction: column;
     }
     &-left {
-      width: 320px;
+      width: 330px;
       flex-shrink: 0;
       // border-right: 1px solid var(--color-border-2);
       margin-right: 12px;

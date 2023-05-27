@@ -1,75 +1,48 @@
 <template>
   <div class="yugao">
     <div class="yugao-content">
-      <a-tabs default-active-key="1" trigger="hover" class="yugao-tabs">
-        <a-tab-pane key="1" title="主日证道">
-          <div class="list">
-            <a-scrollbar outer-class="yugao-scroll" class="yugao-scroll">
+      <a-tabs default-active-key="1" class="yugao-tabs">
+        <a-tab-pane key="1" title="主日证道"></a-tab-pane>
+        <a-tab-pane key="2" title="主日献诗"></a-tab-pane>
+      </a-tabs>
+      <div class="content">
+        <div class="content-left">
+          <a-scrollbar outer-class="yugao-scroll-outer" class="yugao-scroll">
+            <div class="list">
               <div v-for="item in postList" :key="item.desc" class="list-item">
                 <div class="list-image">
                   <img :src="item.image[0]" alt="" />
                 </div>
                 <div class="list-content">
                   <div class="list-title">{{ item.title }}</div>
+
+                  <!-- <div class="list-descriptio">
+
+                  </div> -->
+                  <div class="list-info">
+                    <span class="list-author">{{ item.author }}</span>
+                    <span class="list-date"> {{ item.date }}</span>
+                  </div>
                   <!-- <a-typography-paragraph
-                    :ellipsis="{
-                      rows: 3,
-                    }"
-                    class="list-typography"
-                  >
-                    {{ item.desc }}
-                  </a-typography-paragraph> -->
-                  <!-- <div class="list-descriptio">
-
-                  </div> -->
-                  <div class="list-info">
-                    主讲人：<span class="list-author">{{ item.author }}</span>
-                    时间：<span class="list-date">{{ item.date }}</span>
-                  </div>
+                :ellipsis="{
+                  rows: 1,
+                }"
+                class="list-typography"
+              >
+                {{ item.desc }}
+              </a-typography-paragraph> -->
                 </div>
+                <!-- <div class="list-image">
+              <img :src="item.image[0]" alt="" />
+            </div> -->
               </div>
-            </a-scrollbar>
-          </div>
-        </a-tab-pane>
-        <a-tab-pane key="2" title="主日献诗">
-          <div class="list">
-            <a-scrollbar outer-class="yugao-scroll" class="yugao-scroll">
-              <div v-for="item in 5" :key="item" class="list-item">
-                <div class="list-image">
-                  <img :src="TestImg5" alt="" />
-                </div>
-                <div class="list-content">
-                  <div class="list-title"
-                    >[2023年5月21日主日献唱]《仰望主》</div
-                  >
-                  <a-typography-paragraph
-                    :ellipsis="{
-                      rows: 3,
-                    }"
-                    class="list-typography"
-                  >
-                    仰望主，仰望主，仰望主的荣光重担脱落。仰望主，仰望主，仰望主的荣光，心得自由。
-                    仰望主，仰望主，仰望主的荣光重担脱落。仰望主，仰望主，仰望主的荣光，心得自由。
-                    我主在宝座上掌管世间万有，来认识祂大能权柄，疑惑再不会久留。
-                    仰望主，仰望主，仰望主的荣光重担脱落。仰望主，仰望主，仰望主的荣光，心得自由。
-                    我主在宝座上掌管世间万有，来认识祂大能权柄，平安必代替忧愁。
-                    仰望主，仰望主，仰望主的荣光重担脱落，仰望主，仰望主，仰望主的荣光，心得自由。
-                  </a-typography-paragraph>
-                  <!-- <div class="list-descriptio">
-
-                  </div> -->
-                  <div class="list-info">
-                    诗班：<span class="list-author">大诗班</span> 时间：<span
-                      class="list-date"
-                      >2023年05月26日</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </a-scrollbar>
-          </div>
-        </a-tab-pane>
-      </a-tabs>
+            </div>
+          </a-scrollbar>
+        </div>
+        <div class="content-right">
+          <Announcement />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -85,12 +58,28 @@
   import TestImg7 from '@/assets/images/7.jpg';
   import TestImg8 from '@/assets/images/8.jpg';
 
+  import Announcement from './announcement.vue';
+
   import list from './list.json';
 
   const postList = ref(list);
 </script>
 
 <style scoped lang="less">
+  .content {
+    display: flex;
+    padding: 10px;
+    flex: 1;
+    overflow: hidden;
+    &-left {
+      flex: 1;
+      // margin-right: 10px;
+    }
+    &-right {
+      flex: 1;
+      // margin-left: 10px;
+    }
+  }
   .yugao {
     width: 100%;
     height: 100%;
@@ -114,11 +103,24 @@
     align-items: flex-start;
     flex-shrink: 0;
 
+    :deep(.yugao-scroll-outer) {
+      // width: 100%;
+      // height: 100%;
+      flex: 1;
+      // height: 400px;
+      // overflow: auto;
+      // padding-bottom: 10px;
+      margin: 10px;
+      overflow: hidden;
+    }
+
     :deep(.yugao-scroll) {
       width: 100%;
-      // height: 100%;
-      height: 400px;
+      height: 100%;
+      // height: 400px;
       overflow: auto;
+      // padding-bottom: 10px;
+      // padding: 10px;
     }
 
     :deep(.arco-tabs-content) {
@@ -127,6 +129,7 @@
     }
 
     &-tabs {
+      flex-shrink: 0;
       // height: 100%;
       // overflow: hidden;
       // display: flex;
@@ -149,34 +152,52 @@
     }
 
     &-content {
-      overflow: auto;
+      // overflow: auto;
       // height: 400px;
-      // width: 100%;
-      // flex: 1;
+      height: 100%;
+      width: 100%;
+      flex: 1;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .list {
       display: flex;
-      padding: 0 5px;
+      // padding: 10px;
+      flex: 1;
+      overflow: hidden;
+
+      display: grid;
+      //第一个属性：行与行间隔，第二个属性列与列间隔
+      grid-gap: 10px 10px;
+      //内容整体平均分布
+      justify-content: space-between;
+      //单元格的大小是固定的，但是容器的大小不确定。如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充
+      // grid-template-columns: repeat(auto-fill, 115px);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      width: 100%;
+      flex-shrink: 0;
 
       &-item {
         display: flex;
         width: 100%;
-        padding: 10px;
-        border-bottom: 1px solid var(--color-border-2);
-        cursor: pointer;
+        // height: 65px;
+        // margin-bottom: 10px;
+        // padding: 10px;
+        // border-bottom: 1px solid var(--color-border-2);
+        // cursor: pointer;
 
-        &:hover {
-          background: var(--color-fill-2);
-        }
+        // &:hover {
+        //   background: var(--color-fill-2);
+        // }
       }
 
       &-image {
-        width: 180px;
-        height: 105px;
+        width: 120px;
+        height: 75px;
         margin-right: 10px;
-        border-radius: 4px;
+        border-radius: 2px;
         overflow: hidden;
         flex-shrink: 0;
 
@@ -188,12 +209,12 @@
       }
 
       &-title {
-        font-size: 16px;
-        // font-weight: 500;
-        // margin-top: 2px;
-        margin-bottom: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        // margin-top: 4px;
+        margin-bottom: 8px;
         // font-size: 14px;
-        line-height: 20px;
+        // line-height: 20px;
         // padding: 2px 8px;
         color: var(--color-text-1);
         // background: var(--color-fill-3);
@@ -209,6 +230,8 @@
         // height: 100px;
         display: flex;
         flex-direction: column;
+        padding: 6px 0;
+        // justify-content: space-between;
       }
 
       &-typography {
@@ -223,7 +246,7 @@
         display: flex;
         // justify-content: space-between;
         align-items: center;
-        font-size: 14px;
+        font-size: 12px;
         color: var(--color-text-1);
         // font-weight: bold;
       }
@@ -232,13 +255,13 @@
         margin-right: 10px;
         color: var(--color-text-2);
         // 下划线
-        text-decoration: underline;
-        // font-weight: bold;
+        // text-decoration: underline;
+        font-weight: bold;
       }
 
       &-date {
         color: var(--color-text-2);
-        text-decoration: underline;
+        // text-decoration: underline;
       }
     }
   }

@@ -58,6 +58,51 @@
       label: '消息',
       content: '新增内容已经通过审核，详情请点击查看。',
     },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
+    {
+      type: 'cyan',
+      label: '消息',
+      content: '新增内容已经通过审核，详情请点击查看。',
+    },
   ];
 </script>
 
