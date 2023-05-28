@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
   import Mapview from '@/components/amap/MapContainer.vue';
-  import QrImg from '@/assets/images/MFJhoDoqAtQA.png'
+  import QrImg from '@/assets/images/qr.png'
 </script>
 
 <style lang="less" scoped>

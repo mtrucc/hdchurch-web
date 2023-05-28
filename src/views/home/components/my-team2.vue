@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-  import QrImg from '@/assets/images/MFJhoDoqAtQA.png';
+  import QrImg from '@/assets/images/qrcode.png';
   import Announcement from './announcement.vue';
 
   const teamList = [

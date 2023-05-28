@@ -3,6 +3,7 @@
     <NavBar />
     <PageLayout />
     <Footer />
+    <Qrcode />
   </div>
 </template>
 
@@ -13,6 +14,7 @@
   import NavBar from '@/components/navbar/navbar.vue';
   import Menu from '@/components/menu/index.vue';
   import Footer from '@/components/footer/footer.vue';
+  import Qrcode from '@/components/qrcode.vue';
   import TabBar from '@/components/tab-bar/index.vue';
   import usePermission from '@/hooks/permission';
   import useResponsive from '@/hooks/responsive';

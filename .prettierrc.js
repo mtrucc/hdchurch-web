@@ -4,6 +4,6 @@ module.exports = {
   printWidth: 80,
   singleQuote: true,
   quoteProps: 'consistent',
-  htmlWhitespaceSensitivity: 'strict',
+  htmlWhitespaceSensitivity: 'ignore',
   vueIndentScriptAndStyle: true,
 };

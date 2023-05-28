@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-  import QrImg from '@/assets/images/MFJhoDoqAtQA.png';
+  import QrImg from '@/assets/images/qrcode.png';
 </script>
 
 <style scoped lang="less">

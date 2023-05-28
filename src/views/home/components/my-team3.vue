@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-  import QrImg from '@/assets/images/MFJhoDoqAtQA.png';
+  import QrImg from '@/assets/images/qrcode.png';
   import TestImg1 from '@/assets/images/1.jpg';
   import TestImg2 from '@/assets/images/2.jpg';
   import TestImg3 from '@/assets/images/3.jpg';
