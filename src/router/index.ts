@@ -128,6 +128,16 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/info',
+          name: 'info',
+          component: () => import('@/views/info/index.vue'),
+          meta: {
+            locale: '教会信息',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
         // {
         //   path: '/11',
         //   name: 'home11',
