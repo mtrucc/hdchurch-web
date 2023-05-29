@@ -118,6 +118,16 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/11',
+          name: 'home11',
+          component: () => import('@/views/home/index11.vue'),
+          meta: {
+            locale: '首页11',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
         // {
         //   path: '/11',
         //   name: 'home11',
