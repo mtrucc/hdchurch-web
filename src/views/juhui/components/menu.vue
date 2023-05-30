@@ -16,7 +16,7 @@
   import { ref } from 'vue';
   import { Message } from '@arco-design/web-vue';
 
-  const onCollapse = (val, type) => {
+  const onCollapse = (val: any, type: any) => {
     const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
     Message.info({
       content,

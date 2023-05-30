@@ -62,10 +62,12 @@ export default function setupUserLoginInfoGuard(router: Router) {
         next();
         return;
       }
+      // @ts-ignore
       if (to.name?.includes('info')) {
         next();
         return;
       }
+      // @ts-ignore
       if (to.name?.includes('juhui')) {
         next();
         return;
