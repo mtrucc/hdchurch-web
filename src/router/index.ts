@@ -138,6 +138,16 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/juhui',
+          name: 'juhui',
+          component: () => import('@/views/juhui/index.vue'),
+          meta: {
+            locale: '教会信息',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
         // {
         //   path: '/11',
         //   name: 'home11',

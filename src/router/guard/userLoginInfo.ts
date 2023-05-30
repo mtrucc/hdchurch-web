@@ -66,6 +66,10 @@ export default function setupUserLoginInfoGuard(router: Router) {
         next();
         return;
       }
+      if (to.name?.includes('juhui')) {
+        next();
+        return;
+      }
       next({
         name: 'login',
         query: {
