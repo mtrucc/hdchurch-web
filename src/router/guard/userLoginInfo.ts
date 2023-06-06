@@ -72,6 +72,31 @@ export default function setupUserLoginInfoGuard(router: Router) {
         next();
         return;
       }
+      // @ts-ignore
+      if (to.name?.includes('ziyuan')) {
+        next();
+        return;
+      }
+      // @ts-ignore
+      if (to.name?.includes('onepage')) {
+        next();
+        return;
+      }
+      // @ts-ignore
+      if (to.name?.includes('leftMenuPage')) {
+        next();
+        return;
+      }
+      // @ts-ignore
+      if (to.name?.includes('tuanqi')) {
+        next();
+        return;
+      }
+      // @ts-ignore
+      if (to.name?.includes('juhuidian')) {
+        next();
+        return;
+      }
       next({
         name: 'login',
         query: {

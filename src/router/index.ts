@@ -148,6 +148,56 @@ const router = createRouter({
             roles: ['*'],
           },
         },
+        {
+          path: '/ziyuan',
+          name: 'ziyuan',
+          component: () => import('@/views/ziyuan/index.vue'),
+          meta: {
+            locale: '资源分享',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/onepage',
+          name: 'onepage',
+          component: () => import('@/views/onepage/index.vue'),
+          meta: {
+            locale: '资源分享',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/leftMenuPage',
+          name: 'leftMenuPage',
+          component: () => import('@/views/leftMenuPage/index.vue'),
+          meta: {
+            locale: '资源分享',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/tuanqi',
+          name: 'tuanqi',
+          component: () => import('@/views/tuanqi/index.vue'),
+          meta: {
+            locale: '团契介绍',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
+        {
+          path: '/juhuidian',
+          name: 'juhuidian',
+          component: () => import('@/views/juhuidian/index.vue'),
+          meta: {
+            locale: '团契介绍',
+            requiresAuth: false,
+            roles: ['*'],
+          },
+        },
         // {
         //   path: '/11',
         //   name: 'home11',

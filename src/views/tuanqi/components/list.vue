@@ -1,11 +1,8 @@
 <template>
   <div class="yugao">
-    <a-space class="yugao-input">
-      <a-input placeholder="请输入证道时间" allow-clear />
-      <a-input placeholder="请输入牧师" allow-clear />
-      <a-input placeholder="请输入证道题目" allow-clear />
-      <a-button type="primary">搜索</a-button>
-    </a-space>
+    <div class="title">
+      团契介绍
+    </div>
     <div class="list">
       <div v-for="item in postList" :key="item.desc" class="list-item">
         <div class="list-image">
@@ -13,21 +10,6 @@
         </div>
         <div class="list-content">
           <div class="list-title">{{ item.title }}</div>
-          <!-- <a-typography-paragraph
-                    :ellipsis="{
-                      rows: 3,
-                    }"
-                    class="list-typography"
-                  >
-                    {{ item.desc }}
-                  </a-typography-paragraph> -->
-          <!-- <div class="list-descriptio">
-
-                  </div> -->
-          <div class="list-info">
-            <span class="list-author">{{ item.author }}</span>
-            <span class="list-date">{{ item.date }}</span>
-          </div>
         </div>
       </div>
     </div>
@@ -76,6 +58,14 @@
     // padding: 10px;
     margin: 4px;
 
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
     &-input {
       margin-bottom: 15px;
     }
@@ -90,31 +80,12 @@
       //单元格的大小是固定的，但是容器的大小不确定。如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充
       // grid-template-columns: repeat(auto-fill, 115px);
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      .item {
-        // width: 115px;
-        height: 100px;
-        display: grid;
-        border: 1px solid red;
-        justify-content: center;
-        align-content: center;
-        background-color: rgba(242, 242, 242, 1);
-        border: none;
-        border-radius: 6px;
-        box-shadow: none;
-        font-size: 16px;
-        color: #aaaaaa;
-      }
-    }
-
-    .list {
-      // display: flex;
-      // padding: 0 5px;
 
       &-item {
         display: flex;
+        flex-direction: column;
         width: 100%;
         padding: 10px;
-        border-bottom: 1px solid var(--color-border-2);
         cursor: pointer;
         align-items: center;
 
@@ -124,9 +95,9 @@
       }
 
       &-image {
-        width: 120px;
-        height: 75px;
-        margin-right: 10px;
+        width: 250px;
+        height: 150px;
+        margin-bottom: 10px;
         border-radius: 4px;
         overflow: hidden;
         flex-shrink: 0;
